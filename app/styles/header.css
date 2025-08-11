@@ -1,0 +1,1007 @@
+.headerBox {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.062);
+}
+
+.videoBackground {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.headerHover {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  isolation: isolate;
+  mix-blend-mode: screen;
+}
+.hoverContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 3.2rem;
+}
+
+.span {
+  width: 200px;
+  height: 200px;
+  z-index: 999;
+  animation: expandTriangle 2s ease-in-out 2s forwards;
+}
+@keyframes expandTriangle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(100);
+  }
+}
+.hoverContent h4 {
+  font-size: 9.65rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: scaleX(1.09) scaleY(0.87);
+}
+
+.headerHover p {
+  color: #000000;
+  position: absolute;
+  text-align: unset;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: Nimbus, system-ui;
+  transform: scaleX(1.159);
+  top: 59vh;
+  left: 61.5%;
+}
+
+.hoverLink {
+  font-family: Nimbus, system-ui;
+  font-size: min(1rem + 0.5 * (100vw - 23.4375rem) / 64.0625, 1.5rem);
+  font-weight: 500;
+  top: 60vh;
+  left: 46.5%;
+  margin-top: 3.125rem;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  z-index: 999;
+  text-decoration: none;
+  transform: scaleX(1.21);
+  margin: 50px 0 0;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.hoverLink::after {
+  background-color: currentcolor;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  content: "";
+  display: flex;
+  height: 0.75rem;
+  margin-inline: auto;
+  margin-top: 0.3125rem;
+  width: 0.6875rem;
+}
+
+.brands {
+  width: 100%;
+  height: 280px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.leftSwiper,
+.rightSwiper {
+  width: 100%;
+  height: 24px;
+  background-color: #fff;
+  display: flex;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: none;
+  width: fit-content;
+  will-change: transform;
+}
+
+.leftSwiper ul {
+  animation: leftTicker var(--animation-speed, 20s)
+    var(--animation-direction, reverse) infinite linear;
+}
+
+.rightSwiper ul {
+  animation: rightTicker var(--animation-speed, 20s)
+    var(--animation-direction, forwards) infinite linear;
+}
+
+@keyframes leftTicker {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rightTicker {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+li {
+  align-items: baseline;
+  display: flex;
+  flex-shrink: 0;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  list-style: none;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  gap: 0.5rem;
+  padding-inline: 0.25rem;
+  font-weight: 700;
+  transform: scaleX(1.15);
+}
+
+li svg {
+  aspect-ratio: 225 / 265;
+  background-color: currentcolor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  display: inline-block;
+  height: 0.65em;
+  width: 0.7em;
+}
+
+.logoSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+  padding: 0 47px !important;
+}
+
+.mySwiper .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: black;
+  width: 100%;
+}
+
+.brandLogo {
+  width: 148px;
+  height: 152px;
+  cursor: pointer;
+}
+
+@property --bg-deg {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.offers {
+  width: 100%;
+  height: 953px;
+  --bg-in-color: rgba(95, 41, 173, 0.5) -6.75%, rgba(219, 60, 137, 0.5) 19.87%,
+    hsla(15, 59%, 71%, 0.5) 46.49%, rgba(50, 102, 196, 0.5) 73.1%,
+    rgba(54, 9, 85, 0.5) 99.72%;
+  --bg-deg: 0deg;
+  background-image: linear-gradient(var(--bg-deg), var(--bg-in-color));
+  animation: rotate-gradient 10s linear infinite;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes rotate-gradient {
+  0% {
+    --bg-deg: 0deg;
+  }
+  100% {
+    --bg-deg: 360deg;
+  }
+}
+
+.offers {
+  padding-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.offersHeader {
+  color: #fff;
+  padding: 1.25rem;
+  text-align: center;
+  margin-top: 4.5rem;
+}
+
+.offersHeader h4 {
+  color: inherit;
+  font-family: Nimbus, system-ui;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-wrap: balance;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  margin: 0 auto;
+  max-width: 50rem;
+  font-size: min(2rem + 2.5 * (100vw - 23.4375rem) / 64.0625, 4.5rem);
+  line-height: min(2rem + 2 * (100vw - 23.4375rem) / 64.0625, 4rem);
+  transform: scaleX(1.15) scaleY(0.9);
+  letter-spacing: -0.5px;
+}
+
+.offersHeader p {
+  margin: 0 auto;
+  max-width: 50rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  line-height: 1.5;
+}
+
+.offersHeader p strong {
+  transform: scaleX(0.95);
+  display: flex;
+  justify-content: center;
+}
+
+.offersBox {
+  width: 1271px;
+  height: 458.84px;
+  background-color: #fff;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.offersBox h5 {
+  font-size: 1.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  transform: scaleX(1.1);
+  padding-top: 1.5rem;
+  color: #1a1a1a;
+}
+
+.offersBoxs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  margin-block: 0;
+  margin-inline-start: 0;
+  margin-bottom: 0;
+  margin: 0 0 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.offersContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.offersImageBox {
+  width: 397px;
+  height: 270px;
+  overflow: hidden;
+}
+.offersImage {
+  width: 397px;
+  height: 270px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  transition: transform 0.25s ease-out;
+}
+
+.offersContent:hover .offersImage {
+  transform: scale(1.1);
+}
+
+.offersContent h5 {
+  display: inline-block;
+  position: relative;
+  font-family: Nimbus, system-ui;
+  font-size: 31.7346px;
+  font-weight: 700;
+  line-height: 0.9;
+  padding: 1.25rem 0 0.5rem;
+  transform: scaleX(1.17);
+}
+
+.play {
+  height: 745px;
+  width: 86.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-self: center;
+  position: relative;
+  border-bottom: #1a1a1a 1px solid;
+}
+
+.playHeader {
+  display: flex;
+  align-items: center;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 47.602px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.playHeaderLogo {
+  gap: 2.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.playHeader h4 {
+  transform: scaleX(1.11) scaleY(0.9);
+  margin-left: 15px;
+}
+
+.playHeader .logo {
+  height: 0.65em;
+  width: 0.7em;
+}
+
+.playBtn {
+  display: flex;
+  gap: 3px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.customNext,
+.customPrev {
+  width: 55.59px;
+  height: 55.59px;
+  border: none;
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.customPrev img,
+.customNext img {
+  width: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.customPrev:disabled,
+.customNext:disabled {
+  background-color: #fafafa;
+  cursor: auto;
+}
+
+.customPrev:disabled img,
+.customNext:disabled img {
+  opacity: 0.35;
+}
+
+.customNext:hover:not(:disabled) img,
+.customPrev:hover:not(:disabled) img {
+  animation: arrow var(--animation-speed, 0.3s)
+    var(--animation-direction, reverse) linear;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.playSwiper {
+  width: 100%;
+  height: 485px !important;
+  overflow: visible !important;
+}
+
+.playSwiper .swiper-slide {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  width: 253px !important;
+  height: 485px !important;
+}
+
+.playImage {
+  height: 87px;
+  cursor: pointer;
+}
+
+.videoPLay {
+  height: 383px;
+  object-fit: cover;
+  width: 253px;
+  cursor: pointer;
+}
+
+.playText {
+  height: 317px;
+  width: 86.5%;
+  display: flex;
+  justify-self: center;
+  padding-top: 40px;
+}
+
+.playText h2,
+.playText p {
+  width: 50%;
+  color: inherit;
+  font-family: Nimbus, system-ui;
+}
+
+.playText h2 {
+  font-size: min(2.25rem + 0.75 * (100vw - 23.4375rem) / 64.0625, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02;
+  line-height: 0.9;
+  text-wrap: balance;
+  transform: scaleX(1.18);
+  transform-origin: left;
+}
+
+.playText p {
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: #1a1a1a;
+  font-weight: 400;
+}
+
+.rooms {
+  background-color: #000000;
+  height: 245px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.roomsHeader {
+  width: 87%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.roomsLogoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5rem;
+  margin: 0;
+  padding: 0;
+}
+.roomsLogoBox h2 {
+  font-weight: 700;
+  font-size: 118px;
+  transform: scaleX(1.15) scaleY(0.9);
+  transform-origin: left;
+  text-transform: uppercase;
+  margin-left: -5px;
+}
+.roomsLogo {
+  width: 82.5px;
+  height: 76.5px;
+}
+
+.roomsHeaderText {
+  display: flex;
+  flex-direction: column;
+}
+.roomsHeaderText h5 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.roomsHeaderBtn {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  width: 100%;
+}
+.roomsHeaderBtn p {
+  font-weight: 700;
+}
+.roomsHeaderBtn:hover svg {
+  animation: arrow var(--animation-speed, 0.3s)
+    var(--animation-direction, reverse) linear;
+}
+.roomsBox {
+  width: 100%;
+  height: 693px;
+  position: relative;
+}
+.roomsImage {
+  width: 100%;
+  height: 693px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.swiperSpan {
+  width: 100%;
+  height: 33px;
+  position: absolute;
+  -webkit-backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(3.5px);
+  background: #00000024;
+  cursor: default;
+  z-index: 10;
+}
+.roomsHover {
+  width: 87%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: center;
+  cursor: pointer;
+  z-index: 11;
+}
+.roomsHoverTop .playBtn {
+  position: absolute;
+  top: 50px;
+  right: -35px;
+}
+.roomsHoverTop .playBtn .customNext,
+.roomsHoverTop .playBtn .customPrev {
+  width: 44px;
+  height: 44px;
+  -webkit-backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(3.5px);
+  background: #00000024;
+  border: 1px solid #ffffff48;
+}
+.roomsHoverTop .playBtn .customNext img,
+.roomsHoverTop .playBtn .customPrev img {
+  width: 12px;
+}
+.slideCounter {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+.roomsHoverTop h4 {
+  background-color: #1a1a1a;
+  color: #fff;
+  height: 33px;
+  width: 145px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roomsHoverBottom {
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 999999;
+  position: absolute;
+  bottom: 10px;
+  left: 87px;
+}
+.roomsHoverBottom h4 {
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  transform: scaleX(1.1) scaleY(0.9);
+  transform-origin: left;
+}
+.roomsHoverBottom span,
+.eventBtns span {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  gap: 0.5rem;
+  width: 158px;
+  height: 56px;
+  font-weight: 800;
+}
+.roomsHoverBottom span:hover svg,
+.eventBtns span:hover svg {
+  animation: arrow var(--animation-speed, 0.3s)
+    var(--animation-direction, reverse) linear;
+}
+.events {
+  height: 962px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  overflow: visible;
+}
+.eventsHeader {
+  width: 87%;
+  height: 130px;
+}
+.eventsHeader .roomsHeader {
+  width: 100%;
+  color: #1a1a1a;
+}
+.eventsHeader .roomsHeaderBtn {
+  justify-content: flex-end;
+}
+.eventsHeader .roomsLogoBox {
+  gap: 5.4rem;
+}
+.eventsHeader .roomsLogoBox h2 {
+  transform: scaleX(1.12) scaleY(0.9);
+}
+.events .playBtn {
+  width: 87%;
+  display: flex;
+  justify-content: flex-end;
+}
+.eventsBox {
+  width: 100%;
+
+  /* margin-left: 200px; */
+  /* margin-right: 900px; */
+}
+.eventImageBox {
+  overflow: hidden;
+  cursor: pointer;
+}
+.eventsBox .swiper-slide:hover .eventImageBox img {
+  transform: scale(1.1);
+}
+.emptySlide {
+  width: 75px !important;
+  height: 100%;
+}
+.eventsBox .swiper-slide {
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  align-items: center;
+}
+.eventTime {
+  background-color: #000000;
+  width: 825px;
+  height: 35px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 23px;
+}
+.eventContent {
+  background-color: #fff;
+  padding: 10px 23px;
+  height: 100px;
+  width: 825px;
+  border: #1a1a1a5b 1px solid;
+  border-bottom: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.eventContent h4 {
+  font-weight: 400;
+  width: 825px;
+  color: #1a1a1a;
+  font-size: 32px;
+  cursor: pointer;
+}
+.eventBtns {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eventBtns span {
+  cursor: pointer;
+  width: 175px;
+  background-color: #1a1a1a;
+}
+.eventBtn,
+.eventBtn2 {
+  width: 55.5px;
+  height: 55.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #4dcb5b;
+}
+.eventBtn2 {
+  background-color: #f4f4f4;
+}
+.eventBtn2 svg,
+.eventBtn img {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.eventImage {
+  width: 825px;
+  height: 427px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.25s ease-out;
+}
+.pacha {
+  height: 100%;
+  background-color: #fff;
+}
+
+.pacha h2,
+.pacha h5 {
+  color: #1a1a1a;
+}
+.pacha .roomsLogoBox {
+  gap: 8.5rem;
+}
+.pacha .roomsHeader {
+  padding: 70px 0 50px 0;
+}
+.pacha h2 {
+  transform: scaleX(1.13) scaleY(0.9);
+}
+
+.pachaLogo {
+  width: 82.5px;
+  height: 82.5px;
+}
+.pacha h5 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: right;
+}
+.pacha .eventsBox {
+  width: 825px;
+  align-self: flex-start;
+  margin-left: 85px;
+}
+.pacha .eventBtns {
+  width: 380px;
+}
+.playGround {
+  padding: 100px 0;
+}
+.playGroundHeader {
+  width: 87%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;
+  padding: 50px 0;
+}
+.playGroundHeader h3 {
+  font-size: 47px;
+  transform: scaleX(1.11);
+  transform-origin: left;
+}
+
+.playGroundSwiper .emptySlide {
+  width: 85px !important;
+}
+.playGroundImageBox {
+  position: relative !important;
+  width: 960px !important;
+  height: 500px !important;
+  overflow: hidden;
+}
+.playGroundImage {
+  width: 100% !important;
+  height: 100% !important;
+  cursor: pointer;
+  transition: transform 0.25s ease-out;
+}
+.playDroungHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  cursor: pointer;
+}
+.playGroundImageBox:hover .playGroundImage {
+  transform: scale(1.1);
+}
+.playGroundLogo {
+  position: absolute;
+  width: 33% !important;
+  height: 33% !important;
+  top: 0%;
+  left: 0%;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9;
+  cursor: pointer;
+}
+.spanEnd {
+  height: 1px;
+  width: 88%;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-self: center;
+}
+.senses {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.sensesHeader h2 {
+  font-size: 47.5px;
+  padding: 40px 0 80px 0;
+}
+.sensesBoxs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sensesBox {
+  width: 282.5px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between !important;
+  margin-bottom: 120px;
+}
+.sensesBox:hover .sensesLogo {
+  animation: arrow var(--animation-speed, 0.3s)
+    var(--animation-direction, reverse) linear;
+}
+
+.sensesImageBox {
+  width: 282.5px;
+  height: 382.7px;
+  overflow: hidden;
+}
+.sensesImage {
+  width: 282.5px;
+  height: 382.7px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.25s ease-out;
+}
+.sensesImage:hover {
+  transform: scale(1.1);
+}
+.sensesText {
+  font-size: 24px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.sensesLogo {
+  width: 16px;
+  height: 16px;
+}
+.about {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.aboutImage {
+  height: 596.8px;
+  width: 778.7px;
+  object-fit: cover;
+}
+.aboutText {
+  font-size: 16;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+.aboutText p {
+  padding-bottom: 24px;
+}
+.aboutText .roomsHeaderBtn p {
+  padding: 0;
+}
+.playGroundHeader .roomsHeaderBtn {
+  width: 130px;
+}
+.pressBox {
+  width: 250px;
+  height: 287px;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pressImage {
+  width: 226px;
+  height: 116px;
+  object-fit: cover;
+  display: flex;
+  justify-self: center;
+}
+.pressLogo {
+  height: 26px;
+  max-width: 110px;
+  margin: 16px;
+  object-fit: cover;
+  align-self: flex-start;
+}
+.pressBox p {
+  margin: 16px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}

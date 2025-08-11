@@ -1,0 +1,46 @@
+.homeBtn {
+  width: 415px;
+  height: 60px;
+  background-color: #999999;
+  z-index: 999;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.homeBtn > div {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.5;
+  text-transform: uppercase;
+  width: 50%;
+  height: 100%;
+  color: #fff;
+  border: 1px solid #99999942;
+  box-shadow: 0 1px 10px #99999942;
+}
+
+.roomSpan {
+  color: #d073b2;
+}
+
+.tableSpan {
+  color: #8b9dcc;
+}
+@media (max-width: 700px) {
+  .homeBtn {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+  }
+}

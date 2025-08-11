@@ -1,0 +1,139 @@
+.hoverFooter {
+  height: 88.5vh;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+.footerMain {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 88.5vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: -1;
+}
+
+.footerBox {
+  width: 90%;
+  height: 535px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topFooter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topFooter div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.topFooter ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: -20px;
+}
+
+.topFooter ul li {
+  font-size: 12px;
+  font-weight: 100;
+  padding-bottom: 3px;
+  transform: scaleX(1.25);
+  transform-origin: left;
+  color: #1a1a1a;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.TextColor li {
+  color: #999999 !important;
+  /* padding-left: 50px; */
+}
+
+.topFooter p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.timeBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between !important;
+  height: 120px !important;
+}
+
+.time {
+  font-size: 26;
+  color: #1a1a1a;
+  font-weight: 700;
+  transform: scaleX(1.2);
+  transform-origin: left;
+}
+
+.sochialBox {
+  display: flex;
+  gap: 16px;
+  flex-direction: row !important;
+}
+
+.sochialBox svg {
+  width: 31.73px;
+  height: 31.73px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.sochialBox svg:hover {
+  transform: scale(1.2);
+}
+
+.bottomFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+  flex-direction: column;
+}
+.comePlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  gap: 45px;
+  cursor: pointer;
+}
+
+.comePlay h2 {
+  font-size: 47px;
+  transform: scaleX(1.125) scaleY(0.9);
+  transform-origin: left;
+}
+
+.footerArrow {
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.comePlay:hover .footerArrow {
+  transform: translateX(5px) translateY(-5px);
+}
+
+.footerImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
