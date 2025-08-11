@@ -140,11 +140,11 @@ function Header() {
         <div className="logoSwiper">
           <Swiper
             slidesPerView={5.5}
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-              },
-            }}
+            // breakpoints={{
+            //   768: {
+            //     slidesPerView: 2,
+            //   },
+            // }}
             className="mySwiper"
           >
             <SwiperSlide>
