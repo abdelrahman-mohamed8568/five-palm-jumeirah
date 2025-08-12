@@ -137,3 +137,27 @@
   height: 250px;
   object-fit: cover;
 }
+@media (max-width: 700px) {
+  .hoverFooter,
+  .footerMain {
+    height: 81vh !important;
+  }
+  .footerBox {
+    background-color: blue;
+    height: 90%;
+    justify-self: flex-start;
+  }
+  .topFooter {
+    flex-direction: column-reverse;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  .timeBox {
+    align-items: center;
+  }
+  .footerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

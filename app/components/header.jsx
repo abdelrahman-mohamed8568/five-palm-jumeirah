@@ -139,12 +139,14 @@ function Header() {
         </div>
         <div className="logoSwiper">
           <Swiper
-            slidesPerView={5.5}
-            // breakpoints={{
-            //   768: {
-            //     slidesPerView: 2,
-            //   },
-            // }}
+            breakpoints={{
+              1024: {
+                slidesPerView: 5.5,
+              },
+              375: {
+                slidesPerView: 3,
+              },
+            }}
             className="mySwiper"
           >
             <SwiperSlide>
@@ -203,7 +205,7 @@ function Header() {
           </p>
         </div>
         <div className="offersBox">
-          <h5>ROOM OFFERS AT FIVE</h5>
+          <h5 className="offersBoxHeader">ROOM OFFERS AT FIVE</h5>
           <div className="offersBoxs">
             <div className="offersContent">
               <div className="offersImageBox">
@@ -234,7 +236,7 @@ function Header() {
                 />
               </div>
               <h5 className="textHover">
-                Free Half <br /> Board Offer
+                Free Half<span>Board Offer</span>
               </h5>
             </div>
           </div>
@@ -419,7 +421,14 @@ function Header() {
         </div>
         <span className="swiperSpan"></span>
         <Swiper
-          slidesPerView={1}
+          breakpoints={{
+            1024: {
+              slidesPerView: 1,
+            },
+            375: {
+              slidesPerView: 1.2,
+            },
+          }}
           modules={[Navigation]}
           className="roomsSwiper"
           onInit={(swiper) => {

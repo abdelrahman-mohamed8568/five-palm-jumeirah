@@ -282,7 +282,7 @@ li svg {
 }
 
 .offersBox {
-  width: 1271px;
+  width: 100%;
   height: 458.84px;
   background-color: #fff;
   color: inherit;
@@ -321,6 +321,7 @@ li svg {
   align-items: center;
   overflow: hidden;
   cursor: pointer;
+  z-index: 99;
 }
 
 .offersImageBox {
@@ -342,8 +343,11 @@ li svg {
   transform: scale(1.1);
 }
 
+.textHover {
+  display: flex;
+  flex-direction: column;
+}
 .offersContent h5 {
-  display: inline-block;
   position: relative;
   font-family: Nimbus, system-ui;
   font-size: 31.7346px;
@@ -351,6 +355,8 @@ li svg {
   line-height: 0.9;
   padding: 1.25rem 0 0.5rem;
   transform: scaleX(1.17);
+  transform-origin: center;
+  width: 90%;
 }
 
 .play {
@@ -547,12 +553,14 @@ li svg {
 .roomsHeaderText {
   display: flex;
   flex-direction: column;
+  z-index: 999;
 }
 .roomsHeaderText h5 {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 24px;
 }
+
 .roomsHeaderBtn {
   display: flex;
   text-transform: uppercase;
@@ -572,6 +580,7 @@ li svg {
   width: 100%;
   height: 693px;
   position: relative;
+  z-index: 999;
 }
 .roomsImage {
   width: 100%;
@@ -648,6 +657,7 @@ li svg {
   position: absolute;
   bottom: 10px;
   left: 87px;
+  /* background-color: #4dcb5b; */
 }
 .roomsHoverBottom h4 {
   color: #fff;
@@ -706,12 +716,10 @@ li svg {
   width: 87%;
   display: flex;
   justify-content: flex-end;
+  z-index: 999;
 }
 .eventsBox {
   width: 100%;
-
-  /* margin-left: 200px; */
-  /* margin-right: 900px; */
 }
 .eventImageBox {
   overflow: hidden;
@@ -1004,4 +1012,138 @@ li svg {
   color: #fff;
   font-size: 16px;
   line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .brands {
+    height: 200px;
+  }
+  .mySwiper {
+    padding: 0 !important;
+  }
+  .brandLogo {
+    width: 102px;
+    height: 105px;
+  }
+  .offers {
+    height: 100%;
+  }
+  .offersBox {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  .offersBoxs {
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110vh;
+    width: 92vw;
+  }
+  .offersBox h5:not(.offersBoxHeader) {
+    width: 92vw;
+    font-size: 18px;
+    margin-top: -10px;
+    background-color: #fff;
+  }
+  .textHover {
+    display: block;
+  }
+  .textHover span {
+    padding-left: 5px;
+  }
+  .offersBoxHeader {
+    color: #fff !important;
+  }
+  .offersContent {
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .offersImageBox {
+    height: 100%;
+  }
+  .playHeader {
+    font-size: 36px;
+  }
+  .playHeader .playBtn {
+    display: none;
+  }
+  .playText {
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    gap: 20px;
+    padding-bottom: 100px;
+  }
+  .playText h2,
+  .playText p {
+    width: 100%;
+  }
+  .roomsBox {
+    background-color: #000;
+  }
+  .roomsBox {
+    height: 75vh;
+    width: 100vw;
+  }
+  .roomsHeader {
+    /* width: 100%; */
+    flex-direction: column;
+
+    align-items: flex-start;
+    /* background-color: #4dcb5b; */
+  }
+  .roomsLogoBox {
+    gap: 3rem;
+  }
+  .roomsLogoBox h2 {
+    font-size: 50px;
+  }
+  .roomsLogo {
+    width: 39px;
+    height: 36px;
+  }
+  .swiperSpan {
+    /* background-color: #000;
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0); */
+    display: none;
+  }
+  .roomsHoverTop h4 {
+    color: #000;
+    background-color: #fff;
+  }
+  .roomsHoverTop .playBtn {
+    position: absolute;
+    top: auto;
+    bottom: 80px;
+    right: 0;
+    left: 0;
+    justify-self: center;
+  }
+  .roomsHoverBottom {
+    width: 100%;
+    height: 100%;
+    left: 30px;
+    justify-content: space-between;
+  }
+  .roomsSwiper .swiper-slide {
+    margin-top: 35px;
+    width: 85% !important;
+    padding-left: 28px;
+    background-color: #000;
+    height: 55vh !important;
+  }
+  .roomsImage {
+    width: 80vw;
+    height: 100%;
+    background-color: #000;
+  }
+  .eventsHeader .roomsLogoBox {
+    gap: 3rem;
+  }
+  .roomsHeaderText h5 {
+    font-size: 16px;
+  }
 }
