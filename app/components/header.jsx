@@ -143,7 +143,7 @@ function Header() {
               1024: {
                 slidesPerView: 5.5,
               },
-              375: {
+              320: {
                 slidesPerView: 3,
               },
             }}
@@ -425,7 +425,7 @@ function Header() {
             1024: {
               slidesPerView: 1,
             },
-            375: {
+            320: {
               slidesPerView: 1.2,
             },
           }}
