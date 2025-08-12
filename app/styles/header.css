@@ -1017,6 +1017,23 @@ li svg {
   line-height: 1.5;
 }
 @media (max-width: 700px) {
+  .hoverContent {
+    flex-direction: column;
+    height: 85vh;
+    gap: 2rem;
+  }
+  .hoverContent h4 {
+    font-size: 4rem;
+  }
+  .headerHover p {
+    top: 75vh;
+    left: 0;
+    right: 0;
+    justify-self: center;
+  }
+  .hoverLink {
+    top: 80vh;
+  }
   .brands {
     height: 200px;
   }

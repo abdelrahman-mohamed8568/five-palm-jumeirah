@@ -262,7 +262,9 @@ nav {
   .navTop ul,
   .navBottom ul {
     left: 5vh;
-    /* border-bottom: 1px solid #1a1a1a; */
+  }
+  .navBottom li {
+    font-size: 12px;
   }
   .border {
     top: 50vh;
