@@ -1045,25 +1045,26 @@ li svg {
     height: 105px;
   }
   .offers {
-    height: 100%;
+    height: 80%;
   }
   .offersBox {
-    width: 100%;
+    width: 90vw;
     height: 100%;
+    align-items: center;
     background-color: transparent;
   }
   .offersBoxs {
-    gap: 0;
+    background-color: transparent;
+    gap: 25px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 110vh;
-    width: 92vw;
+    width: 90vw;
   }
   .offersBox h5:not(.offersBoxHeader) {
-    width: 92vw;
+    width: 90vw;
     font-size: 18px;
-    margin-top: -10px;
+    padding: 1.25rem 0;
     background-color: #fff;
   }
   .textHover {
@@ -1081,10 +1082,15 @@ li svg {
     padding: 0;
   }
   .offersImageBox {
+    width: 90vw;
+  }
+  .offersImage {
+    width: 90vw;
     height: 100%;
+    object-fit: cover !important;
   }
   .playHeader {
-    font-size: 36px;
+    font-size: 34px;
   }
   .playHeader .playBtn {
     display: none;
@@ -1104,7 +1110,7 @@ li svg {
     background-color: #000;
   }
   .roomsBox {
-    height: 75vh;
+    height: 100vh;
     width: 100vw;
   }
   .roomsHeader {
@@ -1130,6 +1136,11 @@ li svg {
     backdrop-filter: blur(0); */
     display: none;
   }
+  .roomsHoverTop {
+    width: 100vw;
+    padding: 0;
+    margin-left: -5px;
+  }
   .roomsHoverTop h4 {
     color: #000;
     background-color: #fff;
@@ -1137,7 +1148,7 @@ li svg {
   .roomsHoverTop .playBtn {
     position: absolute;
     top: auto;
-    bottom: 80px;
+    bottom: 40px;
     right: 0;
     left: 0;
     justify-self: center;
@@ -1145,18 +1156,27 @@ li svg {
   .roomsHoverBottom {
     width: 100%;
     height: 100%;
-    left: 30px;
+    left: 20px;
+    font-size: 10px;
     justify-content: space-between;
+  }
+  .roomsHoverBottom h4 {
+    font-size: 18px;
+  }
+  .roomsHoverBottom p {
+    font-size: 12px;
   }
   .roomsSwiper .swiper-slide {
     margin-top: 35px;
-    width: 85% !important;
-    padding-left: 28px;
+    width: 100% !important;
+    /* padding-left: 25px; */
+    padding-left: 5vw;
+
     background-color: #000;
-    height: 55vh !important;
+    height: 75vh !important;
   }
   .roomsImage {
-    width: 80vw;
+    width: 90vw;
     height: 100%;
     background-color: #000;
   }

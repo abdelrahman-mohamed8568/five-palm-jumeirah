@@ -421,14 +421,7 @@ function Header() {
         </div>
         <span className="swiperSpan"></span>
         <Swiper
-          breakpoints={{
-            1024: {
-              slidesPerView: 1,
-            },
-            320: {
-              slidesPerView: 1.2,
-            },
-          }}
+          slidesPerView={1}
           modules={[Navigation]}
           className="roomsSwiper"
           onInit={(swiper) => {
