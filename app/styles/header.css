@@ -71,7 +71,10 @@
   font-size: min(1rem + 0.5 * (100vw - 23.4375rem) / 64.0625, 1.5rem);
   font-weight: 500;
   top: 60vh;
-  left: 46.5%;
+  left: 0;
+  right: 0;
+  align-self: center;
+  justify-self: center;
   margin-top: 3.125rem;
   position: absolute;
   text-align: center;
