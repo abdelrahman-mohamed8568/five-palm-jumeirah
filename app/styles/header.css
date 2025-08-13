@@ -467,7 +467,6 @@ li svg {
 .playSwiperBox {
   width: 100vw !important;
   padding: 0 6.5vw !important;
-  /* background-color: #4dcb5b; */
   overflow: visible;
 }
 .playSwiper {
@@ -477,9 +476,7 @@ li svg {
 }
 
 .playSwiper .swiper-slide {
-  /* width: 253px !important; */
   height: 485px !important;
-  /* background-color: brown; */
 }
 .playBox {
   width: 253px !important;
@@ -1043,12 +1040,32 @@ li svg {
   line-height: 1.5;
 }
 .sensesSwiper {
-  /* padding: 0 10vw !important; */
   width: 100% !important;
   height: 400px;
   overflow: visible !important;
   padding-bottom: 500px !important;
 }
+.sensesBoxs .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+.eventsSwiper {
+  width: 100vw;
+  height: 100%;
+  padding: 0 5vw !important;
+}
+
+.eventSlide {
+  overflow: hidden;
+  width: 825px;
+  height: 560px;
+  position: relative;
+}
+.pachaHeaderText h5 {
+  font-size: 24px;
+  width: 100px;
+}
+
 @media (max-width: 700px) {
   .hoverContent {
     flex-direction: column;
@@ -1364,7 +1381,7 @@ li svg {
     height: 600px !important;
   }
   .playGroundImage {
-    width: 335px !important;
+    width: 90vw !important;
     height: 500px !important;
     object-fit: cover;
   }
@@ -1372,7 +1389,8 @@ li svg {
     transform: scale(1);
   }
   .playDroungHover {
-    width: 335px !important;
+    width: 90vw !important;
+
     height: 500px !important;
   }
   .playGroundLogo {
@@ -1443,26 +1461,4 @@ li svg {
   .press .playGroundHeader h3 {
     max-width: 220px;
   }
-}
-/* ---------- */
-
-.sensesBoxs .swiper-slide {
-  display: flex !important;
-  justify-content: center !important;
-}
-.eventsSwiper {
-  width: 100vw;
-  height: 100%;
-  padding: 0 5vw !important;
-}
-
-.eventSlide {
-  overflow: hidden;
-  width: 825px;
-  height: 560px;
-  position: relative;
-}
-.pachaHeaderText h5 {
-  font-size: 24px;
-  width: 100px;
 }

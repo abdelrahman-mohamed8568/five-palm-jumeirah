@@ -251,10 +251,21 @@ nav {
 }
 
 @media (max-width: 700px) {
+  .navBox,
+  nav {
+    height: 51px !important;
+  }
   .navLinks,
   .hiddenSvg,
   .navRight {
     display: none;
+  }
+  .navLogo {
+    gap: 1rem;
+  }
+  .navLogoImage {
+    height: 12px;
+    width: 207px;
   }
   .navTop li {
     font-size: 18px;

@@ -53,7 +53,7 @@ function Navbar() {
             <div className="bar bar--top"></div>
             <div className="bar bar--bottom"></div>
           </label>
-          <Image src={logo} alt="Logo" />
+          <Image src={logo} alt="Logo" className="navLogoImage" />
         </div>
         {!navToggle && (
           <div className="navLinks">

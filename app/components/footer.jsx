@@ -32,31 +32,50 @@ function Footer() {
       <div className="footerMain">
         <div className="footerBox">
           <div className="topFooter">
-            <div className="">
+            <div className="ulBox">
               <ul>
-                <li className="textHover">About FIFE</li>
-                <li className="textHover">Inthe Press</li>
-                <li className="textHover">Trade Parters</li>
-                <li className="textHover">Awaeds</li>
+                <li className="textHover">
+                  <p>About FIFE</p>
+                </li>
+                <li className="textHover">
+                  <p>Careers</p>
+                </li>
+                <li className="textHover">
+                  <p>Inthe Press</p>
+                </li>
+                <li className="textHover">
+                  <p>Culture</p>
+                </li>
+                <li className="textHover">
+                  <p>Trade Parters</p>
+                </li>
+                <li className="textHover">
+                  <p>FAQs</p>
+                </li>
+                <li className="textHover">
+                  <p>Awaeds</p>
+                </li>
+              </ul>
+
+              <ul className="TextColor">
+                <li className="textHover">
+                  <p>Contact</p>
+                </li>
+                <li className="textHover">
+                  <p>Terms & Conditions</p>
+                </li>
+                <li className="textHover">
+                  <p>Cookies</p>
+                </li>
+                <li className="textHover">
+                  <p>Privasy Policy</p>
+                </li>
+                <li className="textHover">
+                  <p>Sitmap</p>
+                </li>
               </ul>
             </div>
-            <div className="">
-              <ul>
-                <li className="textHover">Careers</li>
-                <li className="textHover">Culture</li>
-                <li className="textHover">FAQs</li>
-              </ul>
-            </div>
-            <div className="TextColor">
-              <ul>
-                <li className="textHover">Contact</li>
-                <li className="textHover">Terms & Conditions</li>
-                <li className="textHover">Cookies</li>
-                <li className="textHover">Privasy Policy</li>
-                <li className="textHover">Sitmap</li>
-              </ul>
-            </div>
-            <div className="">
+            <div className="topFooterText">
               <p>
                 Elevating Luxury <br />
                 Redefining Entertainment
