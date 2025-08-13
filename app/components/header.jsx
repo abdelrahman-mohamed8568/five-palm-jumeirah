@@ -263,103 +263,140 @@ function Header() {
             </button>
           </div>
         </div>
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={20}
-          modules={[Navigation]}
-          className="playSwiper"
-          onInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
-        >
-          <SwiperSlide>
-            <Image src={play1} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play1.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play2} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play2.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play3} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play3.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play4} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play4.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play5} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play5.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play6} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play6.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play7} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play7.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play8} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play8.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play9} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play9.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play10} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play10.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play11} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play11.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play12} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play12.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play13} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play13.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={play14} alt="" className="playImage" />
-            <video autoPlay loop playsInline muted className="videoPLay">
-              <source src="/videos/play/play14.mp4" type="video/mp4" />
-            </video>
-          </SwiperSlide>
-        </Swiper>
+        <div className="playSwiperBox">
+          <Swiper
+            breakpoints={{
+              1024: {
+                slidesPerView: 4,
+              },
+              320: {
+                slidesPerView: 1.3,
+                spaceBetween: "10px",
+              },
+            }}
+            modules={[Navigation]}
+            className="playSwiper"
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+          >
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play1} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play2} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play2.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play3} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play3.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play4} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play4.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play5} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play5.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play6} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play6.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play7} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play7.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play8} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play8.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play9} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play9.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play10} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play10.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play11} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play11.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play12} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play12.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play13} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play13.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="playBox">
+                <Image src={play14} alt="" className="playImage" />
+                <video autoPlay loop playsInline muted className="videoPLay">
+                  <source src="/videos/play/play14.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
       <div className="playText">
         <h2>A CELEBRATORY EXPERIENCE</h2>
@@ -961,7 +998,15 @@ function Header() {
         </div>
         <div className="eventsBox">
           <Swiper
-            slidesPerView={1.6}
+            breakpoints={{
+              1024: {
+                slidesPerView: 1.45,
+              },
+              320: {
+                slidesPerView: 1,
+                spaceBetween: "-12px",
+              },
+            }}
             modules={[Navigation]}
             className="eventsSwiper"
             onInit={(swiper) => {
@@ -971,191 +1016,196 @@ function Header() {
               swiper.navigation.update();
             }}
           >
-            <SwiperSlide className="emptySlide">
-              <span></span>
-            </SwiperSlide>
             <SwiperSlide>
-              <div className="eventTime">
-                <p>30th August, 10PM</p>
-              </div>
-              <div className="eventContent">
-                <h4>
-                  The Penthouse <br /> Presents Tom & Collins
-                </h4>
-                <div className="eventBtns">
-                  <span>
-                    <p>book now</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                    </svg>
-                  </span>
-                  <div className="eventBtn">
-                    <img
-                      src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div className="eventBtn2">
-                    <svg
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
+              <div className="eventSlide">
+                <div className="eventTime">
+                  <p>30th August, 10PM</p>
+                </div>
+                <div className="eventContent">
+                  <h4>
+                    The Penthouse <br /> Presents Tom & Collins
+                  </h4>
+                  <div className="eventBtns">
+                    <span>
+                      <p>book now</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
                         fill="currentColor"
-                      ></path>
-                    </svg>
+                        className="bi bi-caret-right-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                      </svg>
+                    </span>
+                    <div className="eventBtn">
+                      <img
+                        src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className="eventBtn2">
+                      <svg
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="eventImageBox">
-                <Image src={event1} alt="" className="eventImage" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="eventTime">
-                <p>6th September, 10PM</p>
-              </div>
-              <div className="eventContent">
-                <h4>
-                  Skyline Satuurday | <br /> SHOUSE |The Penthouse
-                </h4>
-                <div className="eventBtns">
-                  <span>
-                    <p>book now</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                    </svg>
-                  </span>
-                  <div className="eventBtn">
-                    <img
-                      src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div className="eventBtn2">
-                    <svg
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </div>
+                <div className="eventImageBox">
+                  <Image src={event1} alt="" className="eventImage" />
                 </div>
-              </div>
-              <div className="eventImageBox">
-                <Image src={event2} alt="" className="eventImage" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="eventTime">
-                <p>16th August, 10PM</p>
-              </div>
-              <div className="eventContent">
-                <h4>
-                  The Penthouse <br /> Presents HITTY
-                </h4>
-                <div className="eventBtns">
-                  <span>
-                    <p>book now</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                    </svg>
-                  </span>
-                  <div className="eventBtn">
-                    <img
-                      src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div className="eventBtn2">
-                    <svg
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
+              <div className="eventSlide">
+                <div className="eventTime">
+                  <p>6th September, 10PM</p>
+                </div>
+                <div className="eventContent">
+                  <h4>
+                    Skyline Satuurday | <br /> SHOUSE |The Penthouse
+                  </h4>
+                  <div className="eventBtns">
+                    <span>
+                      <p>book now</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
                         fill="currentColor"
-                      ></path>
-                    </svg>
+                        className="bi bi-caret-right-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                      </svg>
+                    </span>
+                    <div className="eventBtn">
+                      <img
+                        src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className="eventBtn2">
+                      <svg
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="eventImageBox">
-                <Image src={event3} alt="" className="eventImage" />
+                <div className="eventImageBox">
+                  <Image src={event2} alt="" className="eventImage" />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="eventTime">
-                <p>22th August, 10PM</p>
-              </div>
-              <div className="eventContent">
-                <h4>
-                  Hip Hop & RnB At The <br /> Penthouse | Cueball
-                </h4>
-                <div className="eventBtns">
-                  <span>
-                    <p>book now</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                    </svg>
-                  </span>
-                  <div className="eventBtn">
-                    <img
-                      src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
-                      alt=""
-                    />
-                  </div>
-                  <div className="eventBtn2">
-                    <svg
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
+              <div className="eventSlide">
+                <div className="eventTime">
+                  <p>16th August, 10PM</p>
+                </div>
+                <div className="eventContent">
+                  <h4>
+                    The Penthouse <br /> Presents HITTY
+                  </h4>
+                  <div className="eventBtns">
+                    <span>
+                      <p>book now</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
                         fill="currentColor"
-                      ></path>
-                    </svg>
+                        className="bi bi-caret-right-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                      </svg>
+                    </span>
+                    <div className="eventBtn">
+                      <img
+                        src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className="eventBtn2">
+                      <svg
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
+                <div className="eventImageBox">
+                  <Image src={event3} alt="" className="eventImage" />
+                </div>
               </div>
-              <div className="eventImageBox">
-                <Image src={event4} alt="" className="eventImage" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="eventSlide">
+                <div className="eventTime">
+                  <p>22th August, 10PM</p>
+                </div>
+                <div className="eventContent">
+                  <h4>
+                    Hip Hop & RnB At The <br /> Penthouse | Cueball
+                  </h4>
+                  <div className="eventBtns">
+                    <span>
+                      <p>book now</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-caret-right-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                      </svg>
+                    </span>
+                    <div className="eventBtn">
+                      <img
+                        src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className="eventBtn2">
+                      <svg
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.3987 19.3327H19.332V14.1842L14.957 13.3022L11.9097 16.4604C10.9079 15.9081 10.0154 15.3485 9.2322 14.7815C8.44975 14.2137 7.74664 13.6032 7.12286 12.9499C6.50453 12.3362 5.9107 11.6478 5.34136 10.8848C4.77125 10.1226 4.21981 9.27991 3.68703 8.35668L6.83353 5.42835L5.84303 0.666016H0.665363V1.59935C0.665363 3.67602 1.15303 5.77679 2.12836 7.90168C3.1037 10.0273 4.47375 11.98 6.23853 13.7595C8.01809 15.5398 9.96447 16.9138 12.0777 17.8814C14.1901 18.8489 16.2971 19.3327 18.3987 19.3327ZM3.13986 7.26235C2.72842 6.33757 2.4142 5.42368 2.1972 4.52068C1.98097 3.61846 1.86159 2.72246 1.83903 1.83268H4.9062L5.58053 5.02352L3.13986 7.26235ZM12.9982 16.9854L15.3782 14.561L18.1654 15.1152V18.152C17.253 18.1388 16.343 18.0315 15.4354 17.83C14.5285 17.6278 13.7161 17.3462 12.9982 16.9854Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="eventImageBox">
+                  <Image src={event4} alt="" className="eventImage" />
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -1168,47 +1218,46 @@ function Header() {
             <Image src={pacha} alt="" className="pachaLogo" />
           </div>
           <div className="pachaHeaderText">
-            <h5>
-              At FIFE <br />
-              LUXE
-            </h5>
+            <h5>At FIFE LUXE</h5>
           </div>
         </div>
         <div className="eventsBox">
-          <Swiper>
+          <Swiper className="pachaSwiper">
             <SwiperSlide>
-              <div className="eventTime">
-                <p>17th October, 7 PM (Doors Open 6 PM)</p>
-              </div>
-              <div className="eventContent">
-                <h4>
-                  CARL COX | Grand Dubai
-                  <br /> Season Opning |playa Pacha
-                </h4>
-                <div className="eventBtns">
-                  <span>
-                    <p>book now</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                    </svg>
-                  </span>
-                  <div className="eventBtn">
-                    <img
-                      src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
-                      alt=""
-                    />
+              <div className="eventSlide">
+                <div className="eventTime">
+                  <p>17th October, 7 PM (Doors Open 6 PM)</p>
+                </div>
+                <div className="eventContent">
+                  <h4>
+                    CARL COX | Grand Dubai
+                    <br /> Season Opning |playa Pacha
+                  </h4>
+                  <div className="eventBtns">
+                    <span>
+                      <p>book now</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-caret-right-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                      </svg>
+                    </span>
+                    <div className="eventBtn">
+                      <img
+                        src="https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/five-palm-hr/images/whatsapp.png.webp"
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="eventImageBox">
-                <Image src={pachaImage} alt="" className="eventImage" />
+                <div className="eventImageBox">
+                  <Image src={pachaImage} alt="" className="eventImage" />
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -1234,7 +1283,16 @@ function Header() {
         </div>
         <div className="playGroundBox">
           <Swiper
-            slidesPerView={1.38}
+            breakpoints={{
+              1024: {
+                slidesPerView: 1.2,
+                spaceBetween: "-5px",
+              },
+              320: {
+                slidesPerView: 1,
+                spaceBetween: "20px",
+              },
+            }}
             modules={[Navigation]}
             className="playGroundSwiper"
             onInit={(swiper) => {
@@ -1244,137 +1302,144 @@ function Header() {
               swiper.navigation.update();
             }}
           >
-            <SwiperSlide className="emptySlide">
-              <span></span>
-            </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround1} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2025/01/penthouse.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2025/01/penthouse.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround2} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2025/01/bohelialogo.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2025/01/bohelialogo.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround3} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/cinque-1-1.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/cinque-1-1.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround4} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/Maiden-logo.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/Maiden-logo.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround5} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/jade-logo.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/jade-logo.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround6} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/07/praia.png.webp"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/07/praia.png.webp"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround7} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/09/NUMA-Black-logo.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/09/NUMA-Black-logo.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround8} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/beach-by-five-logo-2.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/beach-by-five-logo-2.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround9} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/detox-me-logo.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/detox-me-logo.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="playGroundImageBox">
                 <Image src={playGround10} alt="" className="playGroundImage" />
-                <img
-                  src={
-                    "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/NEW-deli.svg"
-                  }
-                  alt=""
-                  className="playGroundLogo"
-                />
-                <div className="playDroungHover"></div>
+                <div className="playDroungHover">
+                  <img
+                    src={
+                      "https://palmjumeirah.fivehotelsandresorts.com/wp-content/uploads/2024/06/NEW-deli.svg"
+                    }
+                    alt=""
+                    className="playGroundLogo"
+                  />
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -1389,42 +1454,63 @@ function Header() {
           </h2>
         </div>
         <div className="sensesBoxs">
-          <div className="sensesBox">
-            <div className="sensesImageBox">
-              <Image src={senses1} alt="" className="sensesImage" />
-            </div>
-            <div className="sensesText">
-              <h4>Rooms</h4>
-              <Image src={logo} alt="" className="sensesLogo" />
-            </div>
-          </div>
-          <div className="sensesBox">
-            <div className="sensesImageBox">
-              <Image src={senses2} alt="" className="sensesImage" />
-            </div>
-            <div className="sensesText">
-              <h4>eat & drink</h4>
-              <Image src={logo} alt="" className="sensesLogo" />
-            </div>
-          </div>
-          <div className="sensesBox">
-            <div className="sensesImageBox">
-              <Image src={senses3} alt="" className="sensesImage" />
-            </div>
-            <div className="sensesText">
-              <h4>play</h4>
-              <Image src={logo} alt="" className="sensesLogo" />
-            </div>
-          </div>
-          <div className="sensesBox">
-            <div className="sensesImageBox">
-              <Image src={senses4} alt="" className="sensesImage" />
-            </div>
-            <div className="sensesText">
-              <h4>relax</h4>
-              <Image src={logo} alt="" className="sensesLogo" />
-            </div>
-          </div>
+          <Swiper
+            breakpoints={{
+              1024: {
+                slidesPerView: 4,
+              },
+              320: {
+                slidesPerView: 1.3,
+                spaceBetween: "95px",
+              },
+            }}
+            className="sensesSwiper"
+          >
+            <SwiperSlide>
+              <div className="sensesBox">
+                <div className="sensesImageBox">
+                  <Image src={senses1} alt="" className="sensesImage" />
+                </div>
+                <div className="sensesText">
+                  <h4>Rooms</h4>
+                  <Image src={logo} alt="" className="sensesLogo" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sensesBox">
+                <div className="sensesImageBox">
+                  <Image src={senses2} alt="" className="sensesImage" />
+                </div>
+                <div className="sensesText">
+                  <h4>eat & drink</h4>
+                  <Image src={logo} alt="" className="sensesLogo" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sensesBox">
+                <div className="sensesImageBox">
+                  <Image src={senses3} alt="" className="sensesImage" />
+                </div>
+                <div className="sensesText">
+                  <h4>play</h4>
+                  <Image src={logo} alt="" className="sensesLogo" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sensesBox">
+                <div className="sensesImageBox">
+                  <Image src={senses4} alt="" className="sensesImage" />
+                </div>
+                <div className="sensesText">
+                  <h4>relax</h4>
+                  <Image src={logo} alt="" className="sensesLogo" />
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div className="senses">
@@ -1440,17 +1526,26 @@ function Header() {
               Certified, and with a ‘You-Can-Have-It-All’ mindset, we harness
               technology and innovation for guilt-free indulgence.
             </p>
-            <strong>CARBON</strong>
-            <p>
-              5x More Carbon Efficient vs the Average Luxury Resort in UAE (CHSB
-              2023)
-            </p>
-            <strong>ELECTRICITY</strong>
-            <p>100% of Electricity sourced through Green Power</p>
-            <strong>WATER</strong>
-            <p>
-              40.6% Reduction in Water Consumption per Capita in (2023 vs 2020)
-            </p>
+            <div className="aboutTextSectionBox">
+              <div className="aboutTextSection">
+                <strong>CARBON</strong>
+                <p>
+                  5x More Carbon Efficient vs the Average Luxury Resort in UAE
+                  (CHSB 2023)
+                </p>
+              </div>
+              <div className="aboutTextSection">
+                <strong>ELECTRICITY</strong>
+                <p>100% of Electricity sourced through Green Power</p>
+              </div>
+              <div className="aboutTextSection">
+                <strong>WATER</strong>
+                <p>
+                  40.6% Reduction in Water Consumption per Capita in (2023 vs
+                  2020)
+                </p>
+              </div>
+            </div>
             <div className="roomsHeaderBtn">
               <p>know more</p>
               <svg
@@ -1467,7 +1562,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="playGround">
+      <div className="playGround press">
         <div className="playGroundHeader">
           <h3>HOT OFF THE PRESS</h3>
           <div className="roomsHeaderBtn">
@@ -1485,10 +1580,18 @@ function Header() {
           </div>
         </div>
         <div className="playGroundBox">
-          <Swiper slidesPerView={5.05}>
-            <SwiperSlide className="emptySlide">
-              <span></span>
-            </SwiperSlide>
+          <Swiper
+            breakpoints={{
+              1024: {
+                slidesPerView: 5.05,
+              },
+              320: {
+                slidesPerView: 1.3,
+                spaceBetween: "10px",
+              },
+            }}
+            className="pressSwiper"
+          >
             <SwiperSlide>
               <div className="pressBox">
                 <Image

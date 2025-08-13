@@ -21,6 +21,15 @@
   z-index: 1;
   isolation: isolate;
   mix-blend-mode: screen;
+  animation: headerHover 2s 2.5s forwards;
+}
+@keyframes headerHover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .hoverContent {
   display: flex;
@@ -37,12 +46,14 @@
   z-index: 999;
   animation: expandTriangle 2s ease-in-out 2s forwards;
 }
+
 @keyframes expandTriangle {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(100);
+    display: none;
   }
 }
 .hoverContent h4 {
@@ -453,6 +464,12 @@ li svg {
     transform: translateX(0px);
   }
 }
+.playSwiperBox {
+  width: 100vw !important;
+  padding: 0 8vw !important;
+  /* background-color: #4dcb5b; */
+  overflow: visible;
+}
 .playSwiper {
   width: 100%;
   height: 485px !important;
@@ -460,14 +477,18 @@ li svg {
 }
 
 .playSwiper .swiper-slide {
+  /* width: 253px !important; */
+  height: 485px !important;
+  /* background-color: brown; */
+}
+.playBox {
+  width: 253px !important;
+  height: 485px !important;
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   flex-direction: column !important;
-  width: 253px !important;
-  height: 485px !important;
 }
-
 .playImage {
   height: 87px;
   cursor: pointer;
@@ -660,7 +681,6 @@ li svg {
   position: absolute;
   bottom: 10px;
   left: 87px;
-  /* background-color: #4dcb5b; */
 }
 .roomsHoverBottom h4 {
   color: #fff;
@@ -677,8 +697,8 @@ li svg {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  gap: 0.5rem;
-  width: 158px;
+  gap: 10px;
+  width: 178px;
   height: 56px;
   font-weight: 800;
 }
@@ -688,15 +708,14 @@ li svg {
     var(--animation-direction, reverse) linear;
 }
 .events {
-  height: 962px;
   width: 100%;
+  height: 962px;
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  overflow: visible;
 }
 .eventsHeader {
   width: 87%;
@@ -723,18 +742,16 @@ li svg {
 }
 .eventsBox {
   width: 100%;
+  height: 100vh;
 }
 .eventImageBox {
   overflow: hidden;
   cursor: pointer;
 }
-.eventsBox .swiper-slide:hover .eventImageBox img {
+.eventsBox .eventSlide:hover .eventImageBox img {
   transform: scale(1.1);
 }
-.emptySlide {
-  width: 75px !important;
-  height: 100%;
-}
+
 .eventsBox .swiper-slide {
   height: 100%;
   display: flex;
@@ -744,6 +761,8 @@ li svg {
 }
 .eventTime {
   background-color: #000000;
+  position: absolute;
+  top: 0;
   width: 825px;
   height: 35px;
   color: #fff;
@@ -752,6 +771,7 @@ li svg {
 }
 .eventContent {
   background-color: #fff;
+  margin-top: 35px;
   padding: 10px 23px;
   height: 100px;
   width: 825px;
@@ -774,11 +794,7 @@ li svg {
   justify-content: space-between;
   align-items: center;
 }
-.eventBtns span {
-  cursor: pointer;
-  width: 175px;
-  background-color: #1a1a1a;
-}
+
 .eventBtn,
 .eventBtn2 {
   width: 55.5px;
@@ -807,6 +823,7 @@ li svg {
 }
 .pacha {
   height: 100%;
+  width: 100vw;
   background-color: #fff;
 }
 
@@ -844,6 +861,9 @@ li svg {
 .playGround {
   padding: 100px 0;
 }
+.playGroundBox {
+  width: 100%;
+}
 .playGroundHeader {
   width: 87%;
   display: flex;
@@ -858,14 +878,14 @@ li svg {
   transform-origin: left;
 }
 
-.playGroundSwiper .emptySlide {
-  width: 85px !important;
-}
 .playGroundImageBox {
   position: relative !important;
   width: 960px !important;
   height: 500px !important;
   overflow: hidden;
+}
+.playGroundSwiper {
+  padding: 0 6.4vw !important;
 }
 .playGroundImage {
   width: 100% !important;
@@ -881,21 +901,17 @@ li svg {
   height: 100%;
   background-color: #00000050;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 .playGroundImageBox:hover .playGroundImage {
   transform: scale(1.1);
 }
 .playGroundLogo {
-  position: absolute;
-  width: 33% !important;
-  height: 33% !important;
-  top: 0%;
-  left: 0%;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  z-index: 9;
-  cursor: pointer;
+  max-width: 33%;
+  max-height: 33%;
+  align-self: center;
 }
 .spanEnd {
   height: 1px;
@@ -1114,11 +1130,8 @@ li svg {
     width: 100vw;
   }
   .roomsHeader {
-    /* width: 100%; */
     flex-direction: column;
-
     align-items: flex-start;
-    /* background-color: #4dcb5b; */
   }
   .roomsLogoBox {
     gap: 3rem;
@@ -1131,9 +1144,6 @@ li svg {
     height: 36px;
   }
   .swiperSpan {
-    /* background-color: #000;
-    -webkit-backdrop-filter: blur(0);
-    backdrop-filter: blur(0); */
     display: none;
   }
   .roomsHoverTop {
@@ -1148,7 +1158,7 @@ li svg {
   .roomsHoverTop .playBtn {
     position: absolute;
     top: auto;
-    bottom: 40px;
+    bottom: 65px;
     right: 0;
     left: 0;
     justify-self: center;
@@ -1156,23 +1166,35 @@ li svg {
   .roomsHoverBottom {
     width: 100%;
     height: 100%;
+    top: 0;
     left: 20px;
+    width: 90vw;
+    padding: 20px;
+
     font-size: 10px;
     justify-content: space-between;
   }
   .roomsHoverBottom h4 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .roomsHoverBottom p {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .roomsHoverBottom span,
+  .eventBtns span {
+    width: 131px;
+    height: 44px;
   }
   .roomsSwiper .swiper-slide {
-    margin-top: 35px;
-    width: 100% !important;
-    /* padding-left: 25px; */
+    margin-top: 33px;
     padding-left: 5vw;
-
     background-color: #000;
+    width: 100% !important;
+    height: 75vh !important;
+  }
+
+  .eventsSwiper .swiper-slide {
+    width: 100% !important;
     height: 75vh !important;
   }
   .roomsImage {
@@ -1186,4 +1208,228 @@ li svg {
   .roomsHeaderText h5 {
     font-size: 16px;
   }
+  .events {
+    position: relative;
+    height: 625px;
+    padding-top: 50px;
+    gap: 1rem;
+  }
+  .events .playBtn .customPrev,
+  .events .playBtn .customNext {
+    width: 44px;
+    height: 44px;
+  }
+
+  .events .roomsHeaderBtn {
+    position: absolute;
+    left: 5vw;
+    bottom: 10px;
+    width: auto;
+  }
+  .events .playBtn {
+    position: absolute;
+    right: 5vw;
+    bottom: 0;
+  }
+  .eventsSwiper,
+  .pachaSwiper {
+    height: 370px !important;
+    padding: 0 5vw !important;
+  }
+  .eventSlide {
+    width: 310px !important;
+    height: 370px !important;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start !important;
+    padding-top: 35px;
+  }
+  .eventTime {
+    width: 310px !important;
+  }
+  .eventContent {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: space-around;
+    border-bottom: #1a1a1a5b 1px solid;
+    border-top: none;
+  }
+  .eventContent h4 {
+    font-size: 20px;
+    width: 90%;
+    align-self: center;
+  }
+  .eventBtns {
+    width: 90%;
+    align-self: center;
+  }
+  .eventBtn,
+  .eventBtn2 {
+    width: 44px;
+    height: 44px;
+  }
+  .eventBtn2 svg {
+    width: 12px;
+    height: 12px;
+  }
+  .eventImageBox {
+    width: 100%;
+    height: 100%;
+  }
+  .eventImage {
+    width: 100%;
+    height: 100%;
+  }
+  .pacha {
+    height: 100vh;
+  }
+  .pacha .roomsLogoBox {
+    gap: 3rem;
+    justify-content: center !important;
+  }
+  .pacha .roomsLogoBox h2 {
+    width: min-content;
+    transform: scaleX(1.25);
+    transform-origin: left;
+  }
+  .pachaHeaderText h5 {
+    font-size: 16px !important;
+    width: 100% !important;
+  }
+  .pachaLogo {
+    width: 39px;
+    height: 39px;
+    align-self: flex-end;
+    margin-bottom: 15px;
+  }
+  .pachaSwiper .swiper-slide,
+  .pacha .eventSlide {
+    width: 300px !important;
+    height: 370px !important;
+  }
+  .pacha .eventsBox {
+    margin-left: 0;
+  }
+  .pacha .eventBtns {
+    width: 90%;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .pacha .eventBtns span {
+    width: 150px;
+  }
+  .playGround {
+    padding: 0;
+  }
+  .playGroundHeader h3 {
+    font-size: 36px;
+  }
+  .playGroundHeader .playBtn {
+    display: none;
+  }
+  .playGroundImageBox {
+    height: 600px !important;
+  }
+  .playGroundImage {
+    width: 335px !important;
+    height: 500px !important;
+    object-fit: cover;
+  }
+  .playGroundImageBox:hover .playGroundImage {
+    transform: scale(1);
+  }
+  .playDroungHover {
+    width: 335px !important;
+    height: 500px !important;
+  }
+  .playGroundLogo {
+    max-width: 50%;
+    max-height: 50%;
+  }
+  .sensesHeader h2 {
+    font-size: 36px;
+  }
+  .sensesSwiper {
+    padding: 0 10vw !important;
+    width: 100% !important;
+    height: 400px;
+    overflow: visible !important;
+  }
+  .sensesBox,
+  .sensesImageBox,
+  .sensesImage {
+    width: 255px;
+    height: 345px;
+    object-fit: cover;
+  }
+  .sensesBox {
+    height: 380px;
+  }
+  .aboutImage {
+    width: 100%;
+    height: 255px;
+  }
+  .sensesText {
+    font-size: 20px;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .aboutTextSectionBox {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .aboutTextSection {
+    max-width: 30%;
+    font-size: 14px;
+    padding-right: 15px;
+    height: 175px;
+    border-right: 1px solid #999999;
+  }
+  .aboutTextSection:nth-child(3) {
+    border: none;
+  }
+  .press {
+    padding-bottom: 100px;
+  }
+  .pressSwiper {
+    padding: 0 5vw !important;
+  }
+
+  .press .playGroundHeader {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+  .press .playGroundHeader h3 {
+    max-width: 220px;
+  }
+}
+/* ---------- */
+
+.sensesBoxs .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+.eventsSwiper {
+  width: 100vw;
+  height: 100%;
+  padding: 0 5vw !important;
+}
+
+.eventSlide {
+  overflow: hidden;
+  width: 825px;
+  height: 560px;
+  position: relative;
+}
+.pachaHeaderText h5 {
+  font-size: 24px;
+  width: 100px;
 }
