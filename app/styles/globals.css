@@ -1,14 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  /* background-color: #fff; */
   box-sizing: border-box;
 }
 
 body {
-  /* background-color: blueviolet; */
   font-family: "Nimbus Sans L", sans-serif;
-  /* background-color: #fff; */
   z-index: 1000 !important;
   scroll-behavior: smooth;
 }
