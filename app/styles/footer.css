@@ -61,6 +61,7 @@
 }
 .topFooter ul li p {
   font-size: 14px !important;
+  color: #000 !important;
 }
 .TextColor {
   width: 150px !important;
@@ -70,12 +71,15 @@
   gap: 1rem !important;
 }
 .TextColor li {
-  color: #999999 !important;
   display: flex;
   width: min-content !important;
 }
-.topFooter ul li p {
+.topFooter .TextColor li p {
+  color: #999999 !important;
   font-size: 12px !important;
+}
+.topFooter ul li p {
+  font-size: 14px !important;
 }
 .topFooter p {
   font-size: 18px;
@@ -159,13 +163,13 @@
 
   .footerMain {
     height: 85vh;
-    align-self: start !important;
+    align-self: flex-start !important;
     top: 0;
   }
   .footerBox {
-    height: 90vh;
-
+    height: 100vh;
     justify-self: flex-start !important;
+    justify-content: center;
   }
   .topFooter {
     flex-direction: column-reverse;
