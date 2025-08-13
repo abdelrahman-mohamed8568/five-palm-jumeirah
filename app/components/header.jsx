@@ -267,10 +267,11 @@ function Header() {
           <Swiper
             breakpoints={{
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 4.5,
+                spaceBetween: "40px",
               },
               320: {
-                slidesPerView: 1.3,
+                slidesPerView: 1.5,
                 spaceBetween: "10px",
               },
             }}
@@ -1583,7 +1584,8 @@ function Header() {
           <Swiper
             breakpoints={{
               1024: {
-                slidesPerView: 5.05,
+                slidesPerView: 4.5,
+                spaceBetween: "30px",
               },
               320: {
                 slidesPerView: 1.3,

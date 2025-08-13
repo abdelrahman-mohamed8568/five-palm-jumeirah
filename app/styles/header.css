@@ -466,7 +466,7 @@ li svg {
 }
 .playSwiperBox {
   width: 100vw !important;
-  padding: 0 8vw !important;
+  padding: 0 6.5vw !important;
   /* background-color: #4dcb5b; */
   overflow: visible;
 }
@@ -936,6 +936,7 @@ li svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 50px;
 }
 .sensesBox {
   width: 282.5px;
@@ -1003,6 +1004,15 @@ li svg {
 .playGroundHeader .roomsHeaderBtn {
   width: 130px;
 }
+.press {
+  overflow: visible !important;
+}
+.press .pressSwiper {
+  overflow: visible !important;
+}
+.press .playGroundBox {
+  padding: 0 6.5vw !important;
+}
 .pressBox {
   width: 250px;
   height: 287px;
@@ -1031,6 +1041,13 @@ li svg {
   color: #fff;
   font-size: 16px;
   line-height: 1.5;
+}
+.sensesSwiper {
+  /* padding: 0 10vw !important; */
+  width: 100% !important;
+  height: 400px;
+  overflow: visible !important;
+  padding-bottom: 500px !important;
 }
 @media (max-width: 700px) {
   .hoverContent {
@@ -1121,6 +1138,18 @@ li svg {
   .playText h2,
   .playText p {
     width: 100%;
+  }
+  .playBox {
+    width: 210px !important;
+    height: 393px !important;
+  }
+  .playImage {
+    width: 127px;
+    height: 70px;
+  }
+  .videoPLay {
+    width: 210px;
+    height: 320px;
   }
   .roomsBox {
     background-color: #000;
@@ -1357,6 +1386,7 @@ li svg {
     padding: 0 10vw !important;
     width: 100% !important;
     height: 400px;
+
     overflow: visible !important;
   }
   .sensesBox,
@@ -1397,6 +1427,9 @@ li svg {
   }
   .press {
     padding-bottom: 100px;
+  }
+  .press .playGroundBox {
+    padding: 0 !important;
   }
   .pressSwiper {
     padding: 0 5vw !important;
