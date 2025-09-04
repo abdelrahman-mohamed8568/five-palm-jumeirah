@@ -110,11 +110,7 @@ function Navbar() {
       {navToggle && (
         <div className="navMenu">
           <div className="navBackground">
-            <div className="navLeft">
-              <Image src={imageLeft} alt="" className="imageLeft" />
-              <Image src={imageLeft} alt="" className="imageLeft" />
-              <Image src={imageLeft} alt="" className="imageLeft" />
-            </div>
+            <div className="navLeft"></div>
             <div className="navRight">
               <div>
                 <Image src={imageRight} alt="" className="imageRight" />

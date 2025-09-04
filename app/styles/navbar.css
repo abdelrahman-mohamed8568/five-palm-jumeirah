@@ -144,10 +144,12 @@ nav {
 }
 .navBackground {
   display: flex;
-  width: 100%;
+  /* width: 300vw; */
+  width: auto;
+
   height: 100%;
-  /* padding-top: 9vh; */
   position: relative;
+  /* padding-top: 9vh; */
 }
 .navLeft {
   margin: 0;
@@ -156,21 +158,24 @@ nav {
   flex-direction: column;
   width: 100%;
   height: 100%;
+
+  /* background-repeat: repeat; */
+  /* background-size: repeat(); */
+  background-image: url("/images/nav1.svg");
+  /* background-repeat: repeat; */
+  background-position: top left;
+  /* object-fit: fill; */
+  background-size: auto 115px;
+  background-repeat: repeat-y;
 }
-.imageLeft {
-  /* width: 700px;
-  height: 300px; */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 .navRight {
   /* margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column; */
-  width: 400px;
   /* width: 410px; */
+  width: 400px;
   height: 100%;
   background-color: #e9e7e5;
   position: absolute;
@@ -219,6 +224,7 @@ nav {
 .navTop ul {
   /* width: 500px;
   height: 700px; */
+  /* background-color: blue; */
   position: absolute;
   top: 5vh;
   left: 25vh;
@@ -250,10 +256,13 @@ nav {
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
   .navBox,
   nav {
     height: 51px !important;
+  }
+  .navMenu {
+    top: 51px;
   }
   .navLinks,
   .hiddenSvg,
@@ -272,13 +281,13 @@ nav {
   }
   .navTop ul,
   .navBottom ul {
-    left: 5vh;
+    /* left: 5vh; */
   }
   .navBottom li {
     font-size: 12px;
   }
   .border {
-    top: 50vh;
+    top: 55vh;
   }
   .navBottom ul {
     top: 60vh;
