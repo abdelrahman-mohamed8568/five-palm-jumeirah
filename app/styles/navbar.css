@@ -281,13 +281,13 @@ nav {
   }
   .navTop ul,
   .navBottom ul {
-    /* left: 5vh; */
+    left: 7vh;
   }
   .navBottom li {
     font-size: 12px;
   }
   .border {
-    top: 55vh;
+    top: 50vh;
   }
   .navBottom ul {
     top: 60vh;
