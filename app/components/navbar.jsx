@@ -1,14 +1,14 @@
-import Image from "next/image";
 import "../styles/navbar.css";
+import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
-import logo from "@/public/images/navLogo.svg";
-import { motion } from "framer-motion";
+import logo from "@/public/images/navLogo.webp";
 import imageRight from "@/public/images/nav2.webp";
-import imageLeft from "@/public/images/nav1.svg";
+
 function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [navToggle, setNavToggle] = useState(false);
   const prevScrollY = useRef(0);
+
   const openNavbar = () => {
     setNavToggle(!navToggle);
   };
@@ -34,16 +34,7 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const itemVariants = {
-    visible: (i) => ({
-      opacity: 1,
-      transition: { delay: i * 0.1, duration: 2.5, ease: "easeInOut" },
-    }),
-    exit: (i) => ({
-      opacity: 0,
-      transition: { delay: i * 0.1, duration: 0.1, ease: "easeInOut" },
-    }),
-  };
+
   return (
     <nav className={isVisible ? "" : "hidden"}>
       <div className="navBox">

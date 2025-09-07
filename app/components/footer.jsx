@@ -1,8 +1,8 @@
+import "../styles/footer.css";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import "../styles/footer.css";
-import logo from "@/public/images/footer.svg";
-import sideArrow from "@/public/images/sideArrow.svg";
+import logo from "@/public/images/footer.webp";
+import sideArrow from "@/public/images/sideArrow.webp";
 
 function Footer() {
   const [time, setTime] = useState("");
@@ -56,7 +56,6 @@ function Footer() {
                   <p>Awaeds</p>
                 </li>
               </ul>
-
               <ul className="TextColor">
                 <li className="textHover">
                   <p>Contact</p>

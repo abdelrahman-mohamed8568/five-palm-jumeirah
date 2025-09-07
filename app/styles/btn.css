@@ -36,6 +36,7 @@
 .tableSpan {
   color: #8b9dcc;
 }
+
 @media (max-width: 768px) {
   .homeBtn {
     bottom: 0;

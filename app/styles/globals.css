@@ -23,6 +23,7 @@ body {
   transform-origin: 100% 0%;
   transition: transform 0.3s;
 }
+
 .textHover:hover::after {
   transform: scaleX(1);
   transform-origin: 0% 100%;

@@ -23,14 +23,7 @@
   mix-blend-mode: screen;
   animation: headerHover 2s 2.5s forwards;
 }
-@keyframes headerHover {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
 .hoverContent {
   display: flex;
   justify-content: center;
@@ -47,15 +40,6 @@
   animation: expandTriangle 2s ease-in-out 2s forwards;
 }
 
-@keyframes expandTriangle {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(100);
-    display: none;
-  }
-}
 .hoverContent h4 {
   font-size: 9.65rem;
   color: #1a1a1a;
@@ -148,18 +132,6 @@ ul {
     var(--animation-direction, forwards) infinite linear;
 }
 
-@keyframes leftTicker {
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes rightTicker {
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 li {
   align-items: baseline;
   display: flex;
@@ -214,12 +186,6 @@ li svg {
   cursor: pointer;
 }
 
-@property --bg-deg {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 .offers {
   width: 100%;
   height: 953px;
@@ -230,15 +196,6 @@ li svg {
   background-image: linear-gradient(var(--bg-deg), var(--bg-in-color));
   animation: rotate-gradient 10s linear infinite;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-@keyframes rotate-gradient {
-  0% {
-    --bg-deg: 0deg;
-  }
-  100% {
-    --bg-deg: 360deg;
-  }
 }
 
 .offers {
@@ -343,6 +300,7 @@ li svg {
   height: 270px;
   overflow: hidden;
 }
+
 .offersImage {
   width: 397px;
   height: 270px;
@@ -361,6 +319,7 @@ li svg {
   display: flex;
   flex-direction: column;
 }
+
 .offersContent h5 {
   position: relative;
   font-family: Nimbus, system-ui;
@@ -401,6 +360,7 @@ li svg {
   align-items: center;
   width: 100%;
 }
+
 .playHeader h4 {
   transform: scaleX(1.11) scaleY(0.9);
   margin-left: 15px;
@@ -453,22 +413,12 @@ li svg {
     var(--animation-direction, reverse) linear;
 }
 
-@keyframes arrow {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(7px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 .playSwiperBox {
   width: 100vw !important;
   padding: 0 6.5vw !important;
   overflow: visible;
 }
+
 .playSwiper {
   width: 100%;
   height: 485px !important;
@@ -478,6 +428,7 @@ li svg {
 .playSwiper .swiper-slide {
   height: 485px !important;
 }
+
 .playBox {
   width: 253px !important;
   height: 485px !important;
@@ -486,8 +437,10 @@ li svg {
   align-items: center !important;
   flex-direction: column !important;
 }
+
 .playImage {
   height: 87px;
+  width: auto;
   cursor: pointer;
 }
 
@@ -558,6 +511,7 @@ li svg {
   margin: 0;
   padding: 0;
 }
+
 .roomsLogoBox h2 {
   font-weight: 700;
   font-size: 118px;
@@ -566,6 +520,7 @@ li svg {
   text-transform: uppercase;
   margin-left: -5px;
 }
+
 .roomsLogo {
   width: 82.5px;
   height: 76.5px;
@@ -576,6 +531,7 @@ li svg {
   flex-direction: column;
   z-index: 999;
 }
+
 .roomsHeaderText h5 {
   font-size: 24px;
   font-weight: 400;
@@ -590,25 +546,30 @@ li svg {
   gap: 0.5rem;
   width: 100%;
 }
+
 .roomsHeaderBtn p {
   font-weight: 700;
 }
+
 .roomsHeaderBtn:hover svg {
   animation: arrow var(--animation-speed, 0.3s)
     var(--animation-direction, reverse) linear;
 }
+
 .roomsBox {
   width: 100%;
   height: 693px;
   position: relative;
   z-index: 999;
 }
+
 .roomsImage {
   width: 100%;
   height: 693px;
   object-fit: cover;
   cursor: pointer;
 }
+
 .swiperSpan {
   width: 100%;
   height: 33px;
@@ -619,6 +580,7 @@ li svg {
   cursor: default;
   z-index: 10;
 }
+
 .roomsHover {
   width: 87%;
   height: 100%;
@@ -630,11 +592,13 @@ li svg {
   cursor: pointer;
   z-index: 11;
 }
+
 .roomsHoverTop .playBtn {
   position: absolute;
   top: 50px;
   right: -35px;
 }
+
 .roomsHoverTop .playBtn .customNext,
 .roomsHoverTop .playBtn .customPrev {
   width: 44px;
@@ -644,10 +608,12 @@ li svg {
   background: #00000024;
   border: 1px solid #ffffff48;
 }
+
 .roomsHoverTop .playBtn .customNext img,
 .roomsHoverTop .playBtn .customPrev img {
   width: 12px;
 }
+
 .slideCounter {
   width: 90px;
   display: flex;
@@ -657,6 +623,7 @@ li svg {
   font-weight: 600;
   color: #fff;
 }
+
 .roomsHoverTop h4 {
   background-color: #1a1a1a;
   color: #fff;
@@ -669,6 +636,7 @@ li svg {
   align-items: center;
   justify-content: center;
 }
+
 .roomsHoverBottom {
   padding: 50px 15px;
   display: flex;
@@ -679,6 +647,7 @@ li svg {
   bottom: 10px;
   left: 87px;
 }
+
 .roomsHoverBottom h4 {
   color: #fff;
   font-size: 40px;
@@ -686,6 +655,7 @@ li svg {
   transform: scaleX(1.1) scaleY(0.9);
   transform-origin: left;
 }
+
 .roomsHoverBottom span,
 .eventBtns span {
   color: #fff;
@@ -699,11 +669,13 @@ li svg {
   height: 56px;
   font-weight: 800;
 }
+
 .roomsHoverBottom span:hover svg,
 .eventBtns span:hover svg {
   animation: arrow var(--animation-speed, 0.3s)
     var(--animation-direction, reverse) linear;
 }
+
 .events {
   width: 100%;
   height: 962px;
@@ -714,37 +686,46 @@ li svg {
   justify-content: center;
   gap: 2.5rem;
 }
+
 .eventsHeader {
   width: 87%;
   height: 130px;
 }
+
 .eventsHeader .roomsHeader {
   width: 100%;
   color: #1a1a1a;
 }
+
 .eventsHeader .roomsHeaderBtn {
   justify-content: flex-end;
 }
+
 .eventsHeader .roomsLogoBox {
   gap: 5.4rem;
 }
+
 .eventsHeader .roomsLogoBox h2 {
   transform: scaleX(1.12) scaleY(0.9);
 }
+
 .events .playBtn {
   width: 87%;
   display: flex;
   justify-content: flex-end;
   z-index: 999;
 }
+
 .eventsBox {
   width: 100%;
   height: 100vh;
 }
+
 .eventImageBox {
   overflow: hidden;
   cursor: pointer;
 }
+
 .eventsBox .eventSlide:hover .eventImageBox img {
   transform: scale(1.1);
 }
@@ -756,6 +737,7 @@ li svg {
   flex-direction: column;
   align-items: center;
 }
+
 .eventTime {
   background-color: #000000;
   position: absolute;
@@ -766,6 +748,7 @@ li svg {
   font-size: 14px;
   padding: 10px 23px;
 }
+
 .eventContent {
   background-color: #fff;
   margin-top: 35px;
@@ -778,6 +761,7 @@ li svg {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .eventContent h4 {
   font-weight: 400;
   width: 825px;
@@ -785,6 +769,7 @@ li svg {
   font-size: 32px;
   cursor: pointer;
 }
+
 .eventBtns {
   width: 75%;
   display: flex;
@@ -802,15 +787,18 @@ li svg {
   cursor: pointer;
   background-color: #4dcb5b;
 }
+
 .eventBtn2 {
   background-color: #f4f4f4;
 }
+
 .eventBtn2 svg,
 .eventBtn img {
   cursor: pointer;
   width: 24px;
   height: 24px;
 }
+
 .eventImage {
   width: 825px;
   height: 427px;
@@ -818,6 +806,7 @@ li svg {
   cursor: pointer;
   transition: transform 0.25s ease-out;
 }
+
 .pacha {
   height: 100%;
   width: 100vw;
@@ -828,12 +817,15 @@ li svg {
 .pacha h5 {
   color: #1a1a1a;
 }
+
 .pacha .roomsLogoBox {
   gap: 8.5rem;
 }
+
 .pacha .roomsHeader {
   padding: 70px 0 50px 0;
 }
+
 .pacha h2 {
   transform: scaleX(1.13) scaleY(0.9);
 }
@@ -842,25 +834,31 @@ li svg {
   width: 82.5px;
   height: 82.5px;
 }
+
 .pacha h5 {
   font-size: 24px;
   font-weight: 400;
   text-align: right;
 }
+
 .pacha .eventsBox {
   width: 825px;
   align-self: flex-start;
   margin-left: 85px;
 }
+
 .pacha .eventBtns {
   width: 380px;
 }
+
 .playGround {
   padding: 100px 0;
 }
+
 .playGroundBox {
   width: 100%;
 }
+
 .playGroundHeader {
   width: 87%;
   display: flex;
@@ -869,6 +867,7 @@ li svg {
   justify-self: center;
   padding: 50px 0;
 }
+
 .playGroundHeader h3 {
   font-size: 47px;
   transform: scaleX(1.11);
@@ -881,15 +880,18 @@ li svg {
   height: 500px !important;
   overflow: hidden;
 }
+
 .playGroundSwiper {
   padding: 0 6.4vw !important;
 }
+
 .playGroundImage {
   width: 100% !important;
   height: 100% !important;
   cursor: pointer;
   transition: transform 0.25s ease-out;
 }
+
 .playDroungHover {
   position: absolute;
   top: 0;
@@ -902,14 +904,17 @@ li svg {
   justify-content: center;
   align-content: center;
 }
+
 .playGroundImageBox:hover .playGroundImage {
   transform: scale(1.1);
 }
+
 .playGroundLogo {
   max-width: 33%;
   max-height: 33%;
   align-self: center;
 }
+
 .spanEnd {
   height: 1px;
   width: 88%;
@@ -917,16 +922,19 @@ li svg {
   display: flex;
   justify-self: center;
 }
+
 .senses {
   width: 88%;
   display: flex;
   flex-direction: column;
   justify-self: center;
 }
+
 .sensesHeader h2 {
   font-size: 47.5px;
   padding: 40px 0 80px 0;
 }
+
 .sensesBoxs {
   width: 100%;
   height: 100%;
@@ -935,6 +943,7 @@ li svg {
   align-items: center;
   padding-bottom: 50px;
 }
+
 .sensesBox {
   width: 282.5px;
   height: 420px;
@@ -943,6 +952,7 @@ li svg {
   justify-content: space-between !important;
   margin-bottom: 120px;
 }
+
 .sensesBox:hover .sensesLogo {
   animation: arrow var(--animation-speed, 0.3s)
     var(--animation-direction, reverse) linear;
@@ -953,6 +963,7 @@ li svg {
   height: 382.7px;
   overflow: hidden;
 }
+
 .sensesImage {
   width: 282.5px;
   height: 382.7px;
@@ -960,9 +971,11 @@ li svg {
   cursor: pointer;
   transition: transform 0.25s ease-out;
 }
+
 .sensesImage:hover {
   transform: scale(1.1);
 }
+
 .sensesText {
   font-size: 24px;
   text-transform: uppercase;
@@ -971,20 +984,24 @@ li svg {
   gap: 15px;
   cursor: pointer;
 }
+
 .sensesLogo {
   width: 16px;
   height: 16px;
 }
+
 .about {
   display: flex;
   gap: 20px;
   width: 100%;
 }
+
 .aboutImage {
   height: 596.8px;
   width: 778.7px;
   object-fit: cover;
 }
+
 .aboutText {
   font-size: 16;
   display: flex;
@@ -992,24 +1009,31 @@ li svg {
   line-height: 1.5;
   color: #1a1a1a;
 }
+
 .aboutText p {
   padding-bottom: 24px;
 }
+
 .aboutText .roomsHeaderBtn p {
   padding: 0;
 }
+
 .playGroundHeader .roomsHeaderBtn {
   width: 130px;
 }
+
 .press {
   overflow: visible !important;
 }
+
 .press .pressSwiper {
   overflow: visible !important;
 }
+
 .press .playGroundBox {
   padding: 0 6.5vw !important;
 }
+
 .pressBox {
   width: 250px;
   height: 287px;
@@ -1019,6 +1043,7 @@ li svg {
   flex-direction: column;
   align-items: center;
 }
+
 .pressImage {
   width: 226px;
   height: 116px;
@@ -1026,6 +1051,7 @@ li svg {
   display: flex;
   justify-self: center;
 }
+
 .pressLogo {
   height: 26px;
   max-width: 110px;
@@ -1033,22 +1059,26 @@ li svg {
   object-fit: cover;
   align-self: flex-start;
 }
+
 .pressBox p {
   margin: 16px;
   color: #fff;
   font-size: 16px;
   line-height: 1.5;
 }
+
 .sensesSwiper {
   width: 100% !important;
   height: 400px;
   overflow: visible !important;
   padding-bottom: 500px !important;
 }
+
 .sensesBoxs .swiper-slide {
   display: flex !important;
   justify-content: center !important;
 }
+
 .eventsSwiper {
   width: 100vw;
   height: 100%;
@@ -1061,9 +1091,73 @@ li svg {
   height: 560px;
   position: relative;
 }
+
 .pachaHeaderText h5 {
   font-size: 24px;
   width: 100px;
+}
+
+@keyframes headerHover {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes expandTriangle {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(100);
+    display: none;
+  }
+}
+
+@keyframes leftTicker {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rightTicker {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@property --bg-deg {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-gradient {
+  0% {
+    --bg-deg: 0deg;
+  }
+
+  100% {
+    --bg-deg: 360deg;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(7px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 @media (max-width: 700px) {
@@ -1072,37 +1166,46 @@ li svg {
     height: 85vh;
     gap: 2rem;
   }
+
   .hoverContent h4 {
     font-size: 4rem;
   }
+
   .headerHover p {
     top: 75vh;
     left: 0;
     right: 0;
     justify-self: center;
   }
+
   .hoverLink {
     top: 80vh;
   }
+
   .brands {
     height: 200px;
   }
+
   .mySwiper {
     padding: 0 !important;
   }
+
   .brandLogo {
     width: 102px;
     height: 105px;
   }
+
   .offers {
     height: 80%;
   }
+
   .offersBox {
     width: 90vw;
     height: 100%;
     align-items: center;
     background-color: transparent;
   }
+
   .offersBoxs {
     background-color: transparent;
     gap: 25px;
@@ -1111,40 +1214,50 @@ li svg {
     justify-content: space-between;
     width: 90vw;
   }
+
   .offersBox h5:not(.offersBoxHeader) {
     width: 90vw;
     font-size: 18px;
     padding: 1.25rem 0;
     background-color: #fff;
   }
+
   .textHover {
     display: block;
   }
+
   .textHover span {
     padding-left: 5px;
   }
+
   .offersBoxHeader {
     color: #fff !important;
   }
+
   .offersContent {
     gap: 0;
     margin: 0;
     padding: 0;
   }
+
   .offersImageBox {
     width: 90vw;
   }
+
   .offersImage {
     width: 90vw;
     height: 100%;
     object-fit: cover !important;
   }
+
   .playHeader {
     font-size: 34px;
   }
+
   .playHeader .playBtn {
     display: none;
   }
+
   .playText {
     flex-direction: column;
     width: 90%;
@@ -1152,55 +1265,69 @@ li svg {
     gap: 20px;
     padding-bottom: 100px;
   }
+
   .playText h2,
   .playText p {
     width: 100%;
   }
+
   .playBox {
     width: 210px !important;
     height: 393px !important;
   }
+
   .playImage {
     width: 127px;
     height: 70px;
   }
+
   .videoPLay {
     width: 210px;
     height: 320px;
   }
+
   .roomsBox {
     background-color: #000;
   }
+
   .roomsBox {
     height: 100vh;
     width: 100vw;
   }
+
   .roomsHeader {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .roomsLogoBox {
     gap: 3rem;
   }
+
   .roomsLogoBox h2 {
     font-size: 50px;
   }
+
   .roomsLogo {
     width: 39px;
     height: 36px;
   }
+
   .swiperSpan {
     display: none;
   }
+
   .roomsHoverTop {
     width: 100vw;
     padding: 0;
     margin-left: -5px;
   }
+
   .roomsHoverTop h4 {
     color: #000;
     background-color: #fff;
   }
+
   .roomsHoverTop .playBtn {
     position: absolute;
     top: auto;
@@ -1209,6 +1336,7 @@ li svg {
     left: 0;
     justify-self: center;
   }
+
   .roomsHoverBottom {
     width: 100%;
     height: 100%;
@@ -1216,21 +1344,24 @@ li svg {
     left: 20px;
     width: 90vw;
     padding: 20px;
-
     font-size: 10px;
     justify-content: space-between;
   }
+
   .roomsHoverBottom h4 {
     font-size: 20px;
   }
+
   .roomsHoverBottom p {
     font-size: 14px;
   }
+
   .roomsHoverBottom span,
   .eventBtns span {
     width: 131px;
     height: 44px;
   }
+
   .roomsSwiper .swiper-slide {
     margin-top: 33px;
     padding-left: 5vw;
@@ -1243,23 +1374,28 @@ li svg {
     width: 100% !important;
     height: 75vh !important;
   }
+
   .roomsImage {
     width: 90vw;
     height: 100%;
     background-color: #000;
   }
+
   .eventsHeader .roomsLogoBox {
     gap: 3rem;
   }
+
   .roomsHeaderText h5 {
     font-size: 16px;
   }
+
   .events {
     position: relative;
     height: 625px;
     padding-top: 50px;
     gap: 1rem;
   }
+
   .events .playBtn .customPrev,
   .events .playBtn .customNext {
     width: 44px;
@@ -1272,16 +1408,19 @@ li svg {
     bottom: 10px;
     width: auto;
   }
+
   .events .playBtn {
     position: absolute;
     right: 5vw;
     bottom: 0;
   }
+
   .eventsSwiper,
   .pachaSwiper {
     height: 370px !important;
     padding: 0 5vw !important;
   }
+
   .eventSlide {
     width: 310px !important;
     height: 370px !important;
@@ -1290,9 +1429,11 @@ li svg {
     justify-content: start !important;
     padding-top: 35px;
   }
+
   .eventTime {
     width: 310px !important;
   }
+
   .eventContent {
     padding: 0;
     margin: 0;
@@ -1304,109 +1445,133 @@ li svg {
     border-bottom: #1a1a1a5b 1px solid;
     border-top: none;
   }
+
   .eventContent h4 {
     font-size: 20px;
     width: 90%;
     align-self: center;
   }
+
   .eventBtns {
     width: 90%;
     align-self: center;
   }
+
   .eventBtn,
   .eventBtn2 {
     width: 44px;
     height: 44px;
   }
+
   .eventBtn2 svg {
     width: 12px;
     height: 12px;
   }
+
   .eventImageBox {
     width: 100%;
     height: 100%;
   }
+
   .eventImage {
     width: 100%;
     height: 100%;
   }
+
   .pacha {
     height: 100vh;
   }
+
   .pacha .roomsLogoBox {
     gap: 3rem;
     justify-content: center !important;
   }
+
   .pacha .roomsLogoBox h2 {
     width: min-content;
     transform: scaleX(1.25);
     transform-origin: left;
   }
+
   .pachaHeaderText h5 {
     font-size: 16px !important;
     width: 100% !important;
   }
+
   .pachaLogo {
     width: 39px;
     height: 39px;
     align-self: flex-end;
     margin-bottom: 15px;
   }
+
   .pachaSwiper .swiper-slide,
   .pacha .eventSlide {
     width: 300px !important;
     height: 370px !important;
   }
+
   .pacha .eventsBox {
     margin-left: 0;
   }
+
   .pacha .eventBtns {
     width: 90%;
     justify-content: flex-start;
     gap: 1rem;
   }
+
   .pacha .eventBtns span {
     width: 150px;
   }
+
   .playGround {
     padding: 0;
   }
+
   .playGroundHeader h3 {
     font-size: 36px;
   }
+
   .playGroundHeader .playBtn {
     display: none;
   }
+
   .playGroundImageBox {
     height: 600px !important;
   }
+
   .playGroundImage {
     width: 90vw !important;
     height: 500px !important;
     object-fit: cover;
   }
+
   .playGroundImageBox:hover .playGroundImage {
     transform: scale(1);
   }
+
   .playDroungHover {
     width: 90vw !important;
-
     height: 500px !important;
   }
+
   .playGroundLogo {
     max-width: 50%;
     max-height: 50%;
   }
+
   .sensesHeader h2 {
     font-size: 36px;
   }
+
   .sensesSwiper {
     padding: 0 10vw !important;
     width: 100% !important;
     height: 400px;
-
     overflow: visible !important;
   }
+
   .sensesBox,
   .sensesImageBox,
   .sensesImage {
@@ -1414,25 +1579,31 @@ li svg {
     height: 345px;
     object-fit: cover;
   }
+
   .sensesBox {
     height: 380px;
   }
+
   .aboutImage {
     width: 100%;
     height: 255px;
   }
+
   .sensesText {
     font-size: 20px;
   }
+
   .about {
     flex-direction: column;
   }
+
   .aboutTextSectionBox {
     display: flex;
     justify-content: space-between;
     padding-bottom: 40px;
     overflow: hidden;
   }
+
   .aboutTextSection {
     max-width: 30%;
     font-size: 14px;
@@ -1440,15 +1611,19 @@ li svg {
     height: 175px;
     border-right: 1px solid #999999;
   }
+
   .aboutTextSection:nth-child(3) {
     border: none;
   }
+
   .press {
     padding-bottom: 100px;
   }
+
   .press .playGroundBox {
     padding: 0 !important;
   }
+
   .pressSwiper {
     padding: 0 5vw !important;
   }
@@ -1458,6 +1633,7 @@ li svg {
     align-items: start;
     gap: 1rem;
   }
+
   .press .playGroundHeader h3 {
     max-width: 220px;
   }

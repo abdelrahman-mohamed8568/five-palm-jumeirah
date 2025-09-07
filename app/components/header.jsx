@@ -6,31 +6,31 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
-import logo1 from "@/public/images/brand/logo1.svg";
-import logo2 from "@/public/images/brand/logo2.svg";
-import logo3 from "@/public/images/brand/logo3.svg";
-import logo4 from "@/public/images/brand/logo4.svg";
-import logo5 from "@/public/images/brand/logo5.svg";
-import logo6 from "@/public/images/brand/logo6.svg";
+import logo1 from "@/public/images/brand/logo1.webp";
+import logo2 from "@/public/images/brand/logo2.webp";
+import logo3 from "@/public/images/brand/logo3.webp";
+import logo4 from "@/public/images/brand/logo4.webp";
+import logo5 from "@/public/images/brand/logo5.webp";
+import logo6 from "@/public/images/brand/logo6.webp";
 import logo7 from "@/public/images/brand/logo7.webp";
 import offer1 from "@/public/images/offers/offer1.webp";
 import offer2 from "@/public/images/offers/offer2.webp";
 import offer3 from "@/public/images/offers/offer3.webp";
-import logo from "@/public/images/logo.png";
-import play1 from "@/public/images/play/play1.svg";
-import play2 from "@/public/images/play/play2.svg";
-import play3 from "@/public/images/play/play3.svg";
-import play4 from "@/public/images/play/play4.svg";
-import play5 from "@/public/images/play/play5.svg";
-import play6 from "@/public/images/play/play6.svg";
-import play7 from "@/public/images/play/play7.svg";
-import play8 from "@/public/images/play/play8.svg";
-import play9 from "@/public/images/play/play9.svg";
-import play10 from "@/public/images/play/play10.svg";
-import play11 from "@/public/images/play/play11.svg";
-import play12 from "@/public/images/play/play12.svg";
-import play13 from "@/public/images/play/play13.svg";
-import play14 from "@/public/images/play/play14.svg";
+import logo from "@/public/images/logo.webp";
+import play1 from "@/public/images/play/play1.webp";
+import play2 from "@/public/images/play/play2.webp";
+import play3 from "@/public/images/play/play3.webp";
+import play4 from "@/public/images/play/play4.webp";
+import play5 from "@/public/images/play/play5.webp";
+import play6 from "@/public/images/play/play6.webp";
+import play7 from "@/public/images/play/play7.webp";
+import play8 from "@/public/images/play/play8.webp";
+import play9 from "@/public/images/play/play9.webp";
+import play10 from "@/public/images/play/play10.webp";
+import play11 from "@/public/images/play/play11.webp";
+import play12 from "@/public/images/play/play12.webp";
+import play13 from "@/public/images/play/play13.webp";
+import play14 from "@/public/images/play/play14.webp";
 import room1 from "@/public/images/rooms/room1.webp";
 import room2 from "@/public/images/rooms/room2.webp";
 import room3 from "@/public/images/rooms/room3.webp";
@@ -60,7 +60,7 @@ import event1 from "@/public/images/events/event1.webp";
 import event2 from "@/public/images/events/event2.webp";
 import event3 from "@/public/images/events/event3.webp";
 import event4 from "@/public/images/events/event4.webp";
-import pacha from "@/public/images/pacha.svg";
+import pacha from "@/public/images/pacha.webp";
 import pachaImage from "@/public/images/pachaImage.webp";
 import playGround1 from "@/public/images/playGround/playGround1.webp";
 import playGround2 from "@/public/images/playGround/playGround2.webp";
@@ -71,23 +71,23 @@ import playGround6 from "@/public/images/playGround/playGround6.webp";
 import playGround7 from "@/public/images/playGround/playGround7.webp";
 import playGround8 from "@/public/images/playGround/playGround8.webp";
 import playGround9 from "@/public/images/playGround/playGround9.webp";
-import playGround10 from "@/public/images/playGround/playGround10.png";
+import playGround10 from "@/public/images/playGround/playGround10.webp";
 import senses1 from "@/public/images/senses/senses1.webp";
 import senses2 from "@/public/images/senses/senses2.webp";
 import senses3 from "@/public/images/senses/senses3.webp";
 import senses4 from "@/public/images/senses/senses4.webp";
 import about from "@/public/images/about.webp";
-import pressLogo1 from "@/public/images/press/pressLogo1.svg";
-import pressLogo2 from "@/public/images/press/pressLogo2.svg";
-import pressLogo3 from "@/public/images/press/pressLogo3.svg";
-import pressLogo4 from "@/public/images/press/pressLogo4.svg";
-import pressLogo5 from "@/public/images/press/pressLogo5.svg";
+import pressLogo1 from "@/public/images/press/pressLogo1.webp";
+import pressLogo2 from "@/public/images/press/pressLogo2.webp";
+import pressLogo3 from "@/public/images/press/pressLogo3.webp";
+import pressLogo4 from "@/public/images/press/pressLogo4.webp";
+import pressLogo5 from "@/public/images/press/pressLogo5.webp";
 import press1 from "@/public/images/press/press1.webp";
 import press2 from "@/public/images/press/press2.webp";
 import press3 from "@/public/images/press/press3.webp";
 import press4 from "@/public/images/press/press4.webp";
 import press5 from "@/public/images/press/press5.webp";
-import ply from "@/public/images/ply.svg";
+import ply from "@/public/images/ply.webp";
 
 function Header() {
   const prevRef = useRef(null);
@@ -100,7 +100,14 @@ function Header() {
   return (
     <div className="headerBox">
       <div className="headerBackground">
-        <video autoPlay loop playsInline muted className="videoBackground">
+        <video
+          autoPlay
+          loop
+          playsInline
+          muted
+          preload="none"
+          className="videoBackground"
+        >
           <source src="/videos/home/videoBackground.mp4" type="video/mp4" />
         </video>
         <div className="headerHover">
@@ -287,7 +294,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play1} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play1.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -295,7 +309,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play2} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play2.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -303,7 +324,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play3} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play3.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -311,7 +339,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play4} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play4.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -319,7 +354,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play5} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play5.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -327,7 +369,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play6} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play6.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -335,7 +384,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play7} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play7.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -343,7 +399,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play8} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play8.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -351,7 +414,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play9} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play9.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -359,7 +429,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play10} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play10.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -367,7 +444,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play11} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play11.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -375,7 +459,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play12} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play12.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -383,7 +474,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play13} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play13.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -391,7 +489,14 @@ function Header() {
             <SwiperSlide>
               <div className="playBox">
                 <Image src={play14} alt="" className="playImage" />
-                <video autoPlay loop playsInline muted className="videoPLay">
+                <video
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  preload="none"
+                  className="videoPLay"
+                >
                   <source src="/videos/play/play14.mp4" type="video/mp4" />
                 </video>
               </div>

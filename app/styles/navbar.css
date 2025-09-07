@@ -10,9 +10,11 @@ nav {
   transition: all 0.3s ease-in-out;
   scrollbar-width: 0;
 }
+
 .hidden {
   transform: translateY(-100%);
 }
+
 .navBox {
   display: flex;
   align-items: center;
@@ -26,6 +28,7 @@ nav {
   z-index: 1001;
   transition: all 0.3s ease-in-out;
 }
+
 .navLogo,
 .navLinks,
 .navOptions {
@@ -95,14 +98,12 @@ nav {
   text-transform: uppercase;
   color: #1a1a1a;
 }
-.navLinks h3 {
-  /* font-family: Nimbus, system-ui !important; */
 
+.navLinks h3 {
   font-weight: 700;
   cursor: pointer;
   font-size: 16px;
   transform: scaleY(0.77);
-  /* text-shadow: 0px -0.6px 0px #00000093; */
 }
 
 .navOptions span {
@@ -123,34 +124,23 @@ nav {
   animation: i-leaf 1s ease-out infinite alternate;
 }
 
-@keyframes i-leaf {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-30deg);
-  }
-}
-
 .navMenu {
   width: 100%;
   height: 100vh;
-  /* background-color: brown; */
   position: fixed;
   top: 9vh;
   right: 0;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
 }
+
 .navBackground {
   display: flex;
-  /* width: 300vw; */
-  width: auto;
-
+  width: 100% !important;
   height: 100%;
   position: relative;
-  /* padding-top: 9vh; */
 }
+
 .navLeft {
   margin: 0;
   padding: 0;
@@ -158,23 +148,13 @@ nav {
   flex-direction: column;
   width: 100%;
   height: 100%;
-
-  /* background-repeat: repeat; */
-  /* background-size: repeat(); */
-  background-image: url("/images/nav1.svg");
-  /* background-repeat: repeat; */
+  background-image: url("/images/nav1.webp");
   background-position: top left;
-  /* object-fit: fill; */
-  background-size: auto 115px;
   background-repeat: repeat-y;
+  background-size: 100%;
 }
 
 .navRight {
-  /* margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column; */
-  /* width: 410px; */
   width: 400px;
   height: 100%;
   background-color: #e9e7e5;
@@ -192,10 +172,8 @@ nav {
   position: relative;
   overflow: hidden;
 }
-.imageRight {
-  /* width: 700px;
-  height: 300px; */
 
+.imageRight {
   height: 100%;
   left: 0;
   -o-object-fit: cover;
@@ -213,18 +191,16 @@ nav {
 .imageRight:hover {
   transform: scale(1.2);
 }
+
 .border {
   background-color: #1a1a1a;
   width: 100%;
   height: 1px;
   position: absolute;
   top: 60vh;
-  /* left: 25vh; */
 }
+
 .navTop ul {
-  /* width: 500px;
-  height: 700px; */
-  /* background-color: blue; */
   position: absolute;
   top: 5vh;
   left: 25vh;
@@ -233,14 +209,15 @@ nav {
   align-items: flex-start;
   width: 100%;
 }
+
 .navTop li {
   color: #1a1a1a;
   font-size: 31px;
   width: 100%;
   cursor: pointer;
 }
+
 .navBottom ul {
-  /* border-top: 1px solid #1a1a1a; */
   display: grid;
   gap: 1rem 6.5rem;
   grid-template-columns: repeat(2, 1fr);
@@ -249,6 +226,7 @@ nav {
   top: 65vh;
   left: 10vh;
 }
+
 .navBottom li {
   font-size: 14px;
   font-weight: 200;
@@ -256,39 +234,62 @@ nav {
   cursor: pointer;
 }
 
+@keyframes i-leaf {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
 @media (max-width: 1024px) {
   .navBox,
   nav {
     height: 51px !important;
   }
+
   .navMenu {
     top: 51px;
   }
+
   .navLinks,
   .hiddenSvg,
   .navRight {
     display: none;
   }
+
   .navLogo {
     gap: 1rem;
   }
+
   .navLogoImage {
     height: 12px;
     width: 207px;
   }
+
+  .navLeft {
+    background-size: auto 115px;
+  }
+
   .navTop li {
     font-size: 18px;
   }
+
   .navTop ul,
   .navBottom ul {
     left: 7vh;
   }
+
   .navBottom li {
     font-size: 12px;
   }
+
   .border {
     top: 50vh;
   }
+
   .navBottom ul {
     top: 60vh;
   }
